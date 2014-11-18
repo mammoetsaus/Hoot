@@ -1,3 +1,6 @@
 extends ../layout.jade
 block content
-    
+    video(id='localVideo', autoplay='autoplay', muted='muted')
+    video(id='remoteVideo', autoplay='autoplay')
+
+    script(src='/javascripts/hoot.js')

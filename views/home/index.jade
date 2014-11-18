@@ -2,7 +2,5 @@ extends ../layout.jade
 
 block content
     form(action='/room', method='POST')
-        input(id='home_username', name='home_username' type='text', placeholder='Username', autocomplete='off')
+        input(id='home_username', name='home_username' type='text', placeholder='Username', autocomplete='off', value='Thomas')
         input(id='home_submit', name='home_submit' type='submit', value='Start')
-
-    script(src='/javascripts/hoot.js')
