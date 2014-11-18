@@ -1,0 +1,10 @@
+{
+    "name": "Hoot",
+    "version": "0.0.1",
+    "description": "Hoot",
+    "main": "app.js",
+    "author": {
+        "name": "Thomas Voet",
+        "email": "thomas.voet@live.be"
+    }
+}
