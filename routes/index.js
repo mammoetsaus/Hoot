@@ -14,7 +14,7 @@ module.exports = function(app) {
     });
 
     app.post('/room', function(req, res) {
-        if (req.body.home_username) {
+        if (req.body.username) {
             var roomName = utils.getRandomKey(8);
 
             res.redirect('/' + roomName);

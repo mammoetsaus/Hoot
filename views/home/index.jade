@@ -1,6 +1,14 @@
 extends ../layout.jade
 
 block content
-    form(action='/room', method='POST')
-        input(id='home_username', name='home_username' type='text', placeholder='Username', autocomplete='off', value='Thomas')
-        input(id='home_submit', name='home_submit' type='submit', value='Start')
+    div(id='image-background')
+        div(id='form-container')
+            form(action='/room', method='POST', class='paper-1', id='form-home-login', name='form-home-login')
+                section
+                    h1 This is Hoot.
+                div(id='fab-home-login')
+                section
+                    label(for='home-login-username') Enter your username to start.
+                    input(id='home-login-username', name='username' type='text', placeholder='Username', autocomplete='off', value='')
+
+    script(src='/javascripts/index.js')

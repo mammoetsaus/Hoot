@@ -1,0 +1,107 @@
+@import "material-shadows";
+
+///// VARS /////
+$main-blue:     #3F51B5;
+$second-pink:   #E91E63;
+$plain-white:   #FFFFFF;
+$border-grey:   #333333;
+////////////////
+
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
+}
+
+#image-background {
+  position: fixed;
+  z-index: -999;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('../images/background_flou.jpg');
+}
+
+#form-container {
+  position: relative;
+  top: 20%;
+}
+
+#form-container form {
+  display: block;
+  background-color: $plain-white;
+  width: 480px;
+  height: 300px;
+
+  margin: 0 auto;
+}
+
+#form-container form h1 {
+  position: relative;
+  font-weight: 100;
+  font-size: 32px;
+  color: $plain-white;
+
+  top: 90px;
+  left: 20px;
+}
+
+#form-container form section:first-of-type {
+  position: relative;
+  background-color: $main-blue;
+  width: 480px;
+  height: 150px;
+
+  @include z-depth(1);
+}
+
+#form-container form label {
+  display: block;
+  position: relative;
+  left: 20px;
+  top: -15px;
+}
+
+#form-container form input[type="text"] {
+  position: relative;
+  width: 440px;
+  height: 40px;
+
+  left: 20px;
+  top: 5px;
+
+  font-size: 16px;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  border: 0;
+  border-bottom: 1px solid $border-grey;
+}
+
+#form-container form input[type="text"]:focus {
+  outline: 0;
+  border-bottom: 2px solid $main-blue;
+}
+
+#fab-home-login {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+  background-color: $second-pink;
+
+  top: -24px;
+  left: 412px;
+
+  @include z-depth(1);
+  @include z-depth-animation(2);
+}
+
+.paper-1 {
+  @include z-depth(1);
+}
