@@ -1,3 +1,5 @@
+var utils = require('./utils/utils.js');
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -21,12 +23,12 @@ homeController = require('./routes/index.js')(app);
 
 app.set('port', process.env.PORT || 3000);
 var server = app.listen(app.get('port'), function() {
-    console.log('SERVER:    Server started on port ' + server.address().port);
+    utils.log("Server started on port " + server.address().port);
 });
 
 var io = require('socket.io').listen(server);
 io.sockets.on('connection', function(socket) {
-    console.log("SERVER:    Client (" + socket.request.connection.remoteAddress + ") connected");
+    utils.log("Client (" + socket.request.connection.remoteAddress + ") connected");
 
     socket.emit('message', "Client connected");
 });
