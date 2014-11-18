@@ -1,6 +1,6 @@
 Utils = (function() {
     var log = function(message) {
-        console.log("\nSERVER:    " + message + ".");
+        console.log("SERVER:    " + message + ".");
     };
 
     var getRandomKey = function(length) {
