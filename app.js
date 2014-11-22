@@ -7,11 +7,12 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+
 var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(favicon(__dirname + '/public/favicon.ico'));
-app.use(logger('dev'));
+//app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -19,6 +20,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 homeController = require('./routes/index.js')(app);
+
+var rooms = {};
 
 app.set('domain', 'hoot.azurewebsites.net');
 app.set('port', process.env.PORT || 3000);
@@ -28,32 +31,43 @@ var server = app.listen(app.get('port'), function() {
 
 var io = require('socket.io').listen(server);
 io.sockets.on('connection', function(socket) {
-    socket.on('message', function (message) {
-        if (typeof message !== 'object') {
-            utils.log("Received message: " + message);
-        }
-        socket.broadcast.emit('message', message);      // target only people in room...???
+    socket.on('message', function (message, room) {
+        io.to(room.name).emit('message', message);
     });
 
     socket.on('create or join', function (room) {
-        var clients = io.sockets.adapter.rooms[room];
-        var numClients = (typeof clients !== 'undefined') ? Object.keys(clients).length : 0;
-
-        utils.log("Room (" + room + ") has " + numClients + " client(s)");
-        utils.log("User (" + socket.request.connection.remoteAddress + ") requests to join or create room " + room);
-
-        if (numClients == 0){
-            socket.join(room);
-            socket.emit('created', room);
+        var numberOfClients = 0;
+        if (typeof rooms[room.name] !== 'undefined') {
+            numberOfClients = rooms[room.name].clients;
         }
-        else if (numClients == 1) {
-            io.sockets.in(room).emit('join', room);
-            socket.join(room);
-            socket.emit('joined', room);
+        var roomName = room.name;
+
+        utils.log("Room (" + room.name + ") has " + numberOfClients + " client(s)");
+        utils.log("User (" + socket.request.connection.remoteAddress + ") requests to join or create room " + room.name);
+
+        if (numberOfClients == 0){
+            rooms[roomName] = {
+                initiator: room.clientID,
+                callee: null,
+                name: room.name,
+                clients: 1
+            };
+
+            socket.join(room.name);
+            io.to(room.name).emit('p2p-room-created', rooms[roomName]);
+        }
+        else if (numberOfClients == 1) {
+            rooms[roomName].callee = room.clientID;
+            rooms[roomName].clients = 2;
+
+            socket.join(room.name);
+            io.to(room.name).emit('p2p-setup-done', rooms[roomName]);
         }
         else {
-            socket.emit('full', room);
+            socket.emit('p2p-room-full');
         }
+
+        utils.log("Current rooms: " + JSON.stringify(rooms));
     });
 });
 

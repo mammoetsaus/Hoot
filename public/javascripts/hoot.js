@@ -14,43 +14,56 @@ var sdpConstraints = {
 };
 
 var socket = io.connect();
-var room = window.location.pathname.replace('/', '');
+
+var roomName = window.location.pathname.replace('/', '');
+var room;
 
 
 ////////// ROOMS //////////
-if (room !== '') {
-    console.log('CLIENT:    Create or join room', room);
-    socket.emit('create or join', room);
+if (roomName !== '') {
+    console.log('CLIENT:    Connecting to room', roomName);
+
+    var roomObj = {
+        name: roomName,
+        clientID: getRandomKey(8)
+    };
+
+    socket.emit('create or join', roomObj);
 }
 
-socket.on('created', function (room){
-    console.log('CLIENT:    Created room ' + room);
+socket.on('p2p-room-created', function (data){
+    console.log('CLIENT:    Created room ' + JSON.stringify(data));
+
+    room = data;
     isInitiator = true;
 });
 
-socket.on('full', function (room){
-    console.log('CLIENT:    The room: ' + room + ' is full');
-});
+socket.on('p2p-setup-done', function (data){
+    console.log("CLIENT:    Setup done: " + JSON.stringify(data));
 
-socket.on('join', function (room){
-    console.log('CLIENT:    Another peer made a request to join room ' + room);
-    console.log('CLIENT:    This peer is the initiator of room ' + room + '!');
-
+    room = data;
     isChannelReady = true;
 });
 
-socket.on('joined', function (room){
-    console.log('CLIENT:    This peer has joined room ' + room);
-
-    isChannelReady = true;
+socket.on('p2p-room-full', function (){
+    console.log('CLIENT:    This room is full');
 });
+
+function getRandomKey(length) {
+    var charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var result = '';
+
+    for (var i = 0; i < length; i++) {
+        var pos = Math.floor(Math.random() * charSet.length);
+        result += charSet.substring(pos,pos+1);
+    }
+    return result;
+}
 
 
 ////////// MESSAGES //////////
 socket.on('message', function(message) {
-    if (message === 'got user media') {
-        console.log("CLIENT:    Received message from server (got user media): " + message);
-
+    if (message === 'got-local-user-media') {
         tryStartup();
     }
     else if (message.type === 'offer') {
@@ -75,8 +88,8 @@ socket.on('message', function(message) {
     }
 });
 
-function sendMessage(message) {
-    socket.emit('message', message);
+function sendMessage(message, room) {
+    socket.emit('message', message, room);
 }
 
 
@@ -91,10 +104,8 @@ function getUserMediaCallback(stream) {
     localVideo.src = window.URL.createObjectURL(stream);
     localStream = stream;
 
-    sendMessage('got user media');
-
-    if (isInitiator) {
-        tryStartup();
+    if (typeof room !== 'undefined') {
+        sendMessage('got-local-user-media', room);
     }
 }
 
@@ -141,7 +152,7 @@ function handleIceCandidate(event) {
             type: 'candidate',
             label: event.candidate.sdpMLineIndex,
             id: event.candidate.sdpMid,
-            candidate: event.candidate.candidate});
+            candidate: event.candidate.candidate}, room);
     } else {
         console.log('CLIENT:    End of candidates.');
     }
@@ -171,7 +182,7 @@ function setLocalAndSendMessage(sessionDescription) {
     //sessionDescription.sdp = preferOpus(sessionDescription.sdp);          // audio codec not really needed?
     peerConnection.setLocalDescription(sessionDescription);
     console.log('CLIENT:    Sending description message:' + sessionDescription);
-    sendMessage(sessionDescription);
+    sendMessage(sessionDescription, room);
 }
 
 function handleCreateOfferError() {
