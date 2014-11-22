@@ -3,8 +3,7 @@ var utils = require('./utils/utils.js');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
+//var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 
@@ -12,10 +11,9 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(favicon(__dirname + '/public/favicon.ico'));
-//app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+//app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
@@ -24,6 +22,7 @@ homeController = require('./routes/index.js')(app);
 var rooms = {};
 
 app.set('domain', 'hoot.azurewebsites.net');
+//app.set('domain', '192.168.1.5');
 app.set('port', process.env.PORT || 3000);
 var server = app.listen(app.get('port'), function() {
     utils.log("Server started on port " + server.address().port);
@@ -31,8 +30,8 @@ var server = app.listen(app.get('port'), function() {
 
 var io = require('socket.io').listen(server);
 io.sockets.on('connection', function(socket) {
-    socket.on('message', function (message, room) {
-        io.to(room.name).emit('message', message);
+    socket.on('p2p-message', function (message, room) {
+        io.to(room.name).emit('p2p-message', message);
     });
 
     socket.on('create or join', function (room) {
@@ -68,6 +67,10 @@ io.sockets.on('connection', function(socket) {
         }
 
         utils.log("Current rooms: " + JSON.stringify(rooms));
+    });
+
+    socket.on('chat-message', function (chat, room) {
+        io.to(room.name).emit('chat-message', chat);
     });
 });
 

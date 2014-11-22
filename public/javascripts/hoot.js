@@ -15,6 +15,7 @@ var sdpConstraints = {
 
 var socket = io.connect();
 
+var userID;
 var roomName = window.location.pathname.replace('/', '');
 var room;
 
@@ -23,9 +24,11 @@ var room;
 if (roomName !== '') {
     console.log('CLIENT:    Connecting to room', roomName);
 
+    userID = getRandomKey(8);
+
     var roomObj = {
         name: roomName,
-        clientID: getRandomKey(8)
+        clientID: userID
     };
 
     socket.emit('create or join', roomObj);
@@ -62,7 +65,7 @@ function getRandomKey(length) {
 
 
 ////////// MESSAGES //////////
-socket.on('message', function(message) {
+socket.on('p2p-message', function(message) {
     if (message === 'got-local-user-media') {
         tryStartup();
     }
@@ -89,7 +92,7 @@ socket.on('message', function(message) {
 });
 
 function sendMessage(message, room) {
-    socket.emit('message', message, room);
+    socket.emit('p2p-message', message, room);
 }
 
 
@@ -126,7 +129,6 @@ function tryStartup() {
         }
     }
 }
-
 
 
 ////////// SETUP PEER CONNECTION //////////
@@ -264,3 +266,36 @@ function removeCN(sdpLines, mLineIndex) {
     sdpLines[mLineIndex] = mLineElements.join(' ');
     return sdpLines;
 }
+
+
+
+////////// PAGE ///////////
+document.getElementById('room-chat-input').onkeypress = function(e){
+    if (!e) e = window.event;
+    var keyCode = e.keyCode || e.which;
+    if (keyCode == '13'){
+        var inputLocalChat = document.getElementById('room-chat-input');
+
+        var chatObj = {
+            origin: userID,
+            message: inputLocalChat.value
+        };
+
+        socket.emit('chat-message', chatObj, room);
+        inputLocalChat.value = '';
+    }
+};
+
+socket.on('chat-message', function(chat) {
+    var localChatContainer = document.getElementById('room-chat-local-container');
+    var remoteChatContainer = document.getElementById('room-chat-remote-container');
+
+    console.log(JSON.stringify(chat));
+
+    if (chat.origin === userID) {
+        localChatContainer.insertAdjacentHTML('beforeend', '<p>' + chat.message + '</p>');
+    }
+    else {
+        remoteChatContainer.insertAdjacentHTML('beforeend', '<p>' + chat.message + '</p>');
+    }
+});
