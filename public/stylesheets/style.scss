@@ -1,10 +1,11 @@
 @import "material-shadows";
 
 ///// VARS /////
-$main-blue:     #3F51B5;
-$second-pink:   #E91E63;
-$plain-white:   #FFFFFF;
-$border-grey:   #333333;
+$main-blue:             #3F51B5;
+$second-pink:           #E91E63;
+$second-pink-accent:    #F50057;
+$plain-white:           #FFFFFF;
+$border-grey:           #333333;
 ////////////////
 
 
@@ -90,16 +91,24 @@ $border-grey:   #333333;
 
 #fab-home-login {
   position: relative;
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   border-radius: 48px;
   background-color: $second-pink;
 
-  top: -24px;
-  left: 412px;
+  top: -28px;
+  left: 404px;
 
   @include z-depth(1);
   @include z-depth-animation(2);
+}
+
+#fab-home-login:hover {
+  background-color: $second-pink-accent;
+}
+
+#fab-home-login svg {
+  margin: 4px 0 0 4px;
 }
 
 .paper-1 {

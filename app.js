@@ -3,7 +3,6 @@ var utils = require('./utils/utils.js');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
-//var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 
@@ -13,7 +12,6 @@ app.set('view engine', 'jade');
 app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-//app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
@@ -21,8 +19,8 @@ homeController = require('./routes/index.js')(app);
 
 var rooms = {};
 
-app.set('domain', 'hoot.azurewebsites.net');
-//app.set('domain', '192.168.1.5');
+//app.set('domain', 'hoot.azurewebsites.net');
+app.set('domain', '172.30.26.22');
 app.set('port', process.env.PORT || 3000);
 var server = app.listen(app.get('port'), function() {
     utils.log("Server started on port " + server.address().port);
@@ -71,6 +69,10 @@ io.sockets.on('connection', function(socket) {
 
     socket.on('chat-message', function (chat, room) {
         io.to(room.name).emit('chat-message', chat);
+    });
+
+    socket.on('buzzer-message', function(buzzer, room) {
+        io.to(room.name).emit('buzzer-message', buzzer);
     });
 });
 

@@ -299,3 +299,19 @@ socket.on('chat-message', function(chat) {
         remoteChatContainer.insertAdjacentHTML('beforeend', '<p>' + chat.message + '</p>');
     }
 });
+
+document.getElementById('remoteVideo').onclick = function () {
+    var buzzerObj = {
+        origin: userID
+    };
+
+    socket.emit('buzzer-message', buzzerObj, room);
+};
+
+socket.on('buzzer-message', function(buzzer) {
+    if (buzzer.origin === userID) {
+    }
+    else {
+        alert("BUZZERS!");
+    }
+});

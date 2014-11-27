@@ -26,8 +26,8 @@
       <file leaf-file-name="hoot.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/javascripts/hoot.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1887">
-              <caret line="295" column="56" selection-start-line="295" selection-start-column="47" selection-end-line="295" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="178" max-vertical-offset="2159">
+              <caret line="93" column="29" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
               <folding>
                 <element signature="e#135#214#0" expanded="false" />
                 <element signature="e#155#212#0" expanded="false" />
@@ -50,6 +50,7 @@
                 <element signature="e#2273#2280#0" expanded="false" />
                 <element signature="n#!!block;n#sendMessage#0" expanded="false" />
                 <element signature="n#!!block;n#getUserMediaCallback#0" expanded="false" />
+                <element signature="e#2842#2900#0" expanded="false" />
                 <element signature="n#!!block;n#getUserMediaErrorCallback#0" expanded="false" />
                 <element signature="n#!!block;n#tryStartup#0" expanded="false" />
                 <element signature="e#3102#3279#0" expanded="false" />
@@ -91,17 +92,9 @@
       <file leaf-file-name="app.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32730561" vertical-offset="227" max-vertical-offset="799">
-              <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-              <folding>
-                <element signature="e#802#871#0" expanded="false" />
-                <element signature="e#1136#2254#0" expanded="false" />
-                <element signature="e#1224#1291#0" expanded="false" />
-                <element signature="e#1568#1867#0" expanded="false" />
-                <element signature="e#1600#1747#0" expanded="false" />
-                <element signature="e#1907#2118#0" expanded="false" />
-                <element signature="e#2132#2185#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="0.676311" vertical-offset="0" max-vertical-offset="1428">
+              <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -110,7 +103,7 @@
         <entry file="file://$PROJECT_DIR$/views/home/room.jade">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+              <caret line="3" column="25" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -136,13 +129,13 @@
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/public/scss/extra.scss" />
         <option value="$PROJECT_DIR$/public/stylesheets/material-shadows.scss" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style.scss" />
         <option value="$PROJECT_DIR$/public/javascripts/main.js" />
         <option value="$PROJECT_DIR$/public/javascripts/index.js" />
-        <option value="$PROJECT_DIR$/views/home/index.jade" />
         <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/views/home/room.jade" />
+        <option value="$PROJECT_DIR$/views/layout.jade" />
+        <option value="$PROJECT_DIR$/views/home/index.jade" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style.scss" />
         <option value="$PROJECT_DIR$/public/javascripts/hoot.js" />
         <option value="$PROJECT_DIR$/app.js" />
       </list>
@@ -425,7 +418,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -469,19 +462,203 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public/javascripts/hoot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5202">
+          <caret line="295" column="56" selection-start-line="295" selection-start-column="47" selection-end-line="295" selection-end-column="56" />
+          <folding>
+            <element signature="e#135#214#0" expanded="false" />
+            <element signature="e#155#212#0" expanded="false" />
+            <element signature="e#237#336#0" expanded="false" />
+            <element signature="e#256#334#0" expanded="false" />
+            <element signature="e#498#714#0" expanded="false" />
+            <element signature="e#610#666#0" expanded="false" />
+            <element signature="e#761#874#0" expanded="false" />
+            <element signature="e#921#1036#0" expanded="false" />
+            <element signature="e#1078#1130#0" expanded="false" />
+            <element signature="n#!!block;n#getRandomKey#0" expanded="false" />
+            <element signature="e#1309#1426#0" expanded="false" />
+            <element signature="e#1524#2282#0" expanded="false" />
+            <element signature="e#1570#1599#0" expanded="false" />
+            <element signature="e#1639#1829#0" expanded="false" />
+            <element signature="e#1681#1718#0" expanded="false" />
+            <element signature="e#1883#1971#0" expanded="false" />
+            <element signature="e#2028#2227#0" expanded="false" />
+            <element signature="e#2074#2168#0" expanded="false" />
+            <element signature="e#2273#2280#0" expanded="false" />
+            <element signature="n#!!block;n#sendMessage#0" expanded="false" />
+            <element signature="n#!!block;n#getUserMediaCallback#0" expanded="false" />
+            <element signature="e#2842#2900#0" expanded="false" />
+            <element signature="n#!!block;n#getUserMediaErrorCallback#0" expanded="false" />
+            <element signature="n#!!block;n#tryStartup#0" expanded="false" />
+            <element signature="e#3102#3279#0" expanded="false" />
+            <element signature="e#3237#3273#0" expanded="false" />
+            <element signature="n#!!block;n#createPeerConnection#0" expanded="false" />
+            <element signature="e#3370#3703#0" expanded="false" />
+            <element signature="e#3718#3820#0" expanded="false" />
+            <element signature="n#!!block;n#handleIceCandidate#0" expanded="false" />
+            <element signature="e#3951#4159#0" expanded="false" />
+            <element signature="e#3973#4145#0" expanded="false" />
+            <element signature="e#4165#4226#0" expanded="false" />
+            <element signature="n#!!block;n#handleRemoteStreamAdded#0" expanded="false" />
+            <element signature="n#!!block;n#handleRemoteStreamRemoved#0" expanded="false" />
+            <element signature="n#!!block;n#startCall#0" expanded="false" />
+            <element signature="n#!!block;n#startAnswer#0" expanded="false" />
+            <element signature="n#!!block;n#setLocalAndSendMessage#0" expanded="false" />
+            <element signature="n#!!block;n#handleCreateOfferError#0" expanded="false" />
+            <element signature="n#!!block;n#preferOpus#0" expanded="false" />
+            <element signature="e#5493#5609#0" expanded="false" />
+            <element signature="e#5545#5603#0" expanded="false" />
+            <element signature="e#5639#5666#0" expanded="false" />
+            <element signature="e#5772#6077#0" expanded="false" />
+            <element signature="e#5827#6071#0" expanded="false" />
+            <element signature="e#5936#6042#0" expanded="false" />
+            <element signature="n#!!block;n#extractSdp#0" expanded="false" />
+            <element signature="n#!!block;n#setDefaultCodec#0" expanded="false" />
+            <element signature="e#6577#6833#0" expanded="false" />
+            <element signature="e#6604#6734#0" expanded="false" />
+            <element signature="e#6772#6827#0" expanded="false" />
+            <element signature="n#!!block;n#removeCN#0" expanded="false" />
+            <element signature="e#7130#7516#0" expanded="false" />
+            <element signature="e#7227#7510#0" expanded="false" />
+            <element signature="e#7315#7428#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1173" max-vertical-offset="1394">
+          <caret line="69" column="7" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/home/room.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="289">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/home/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="408">
+          <caret line="9" column="70" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="2057">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="289">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/hoot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5015" max-vertical-offset="5202">
+          <caret line="295" column="56" selection-start-line="295" selection-start-column="47" selection-end-line="295" selection-end-column="56" />
+          <folding>
+            <element signature="e#135#214#0" expanded="false" />
+            <element signature="e#155#212#0" expanded="false" />
+            <element signature="e#237#336#0" expanded="false" />
+            <element signature="e#256#334#0" expanded="false" />
+            <element signature="e#498#714#0" expanded="false" />
+            <element signature="e#610#666#0" expanded="false" />
+            <element signature="e#761#874#0" expanded="false" />
+            <element signature="e#921#1036#0" expanded="false" />
+            <element signature="e#1078#1130#0" expanded="false" />
+            <element signature="n#!!block;n#getRandomKey#0" expanded="false" />
+            <element signature="e#1309#1426#0" expanded="false" />
+            <element signature="e#1524#2282#0" expanded="false" />
+            <element signature="e#1570#1599#0" expanded="false" />
+            <element signature="e#1639#1829#0" expanded="false" />
+            <element signature="e#1681#1718#0" expanded="false" />
+            <element signature="e#1883#1971#0" expanded="false" />
+            <element signature="e#2028#2227#0" expanded="false" />
+            <element signature="e#2074#2168#0" expanded="false" />
+            <element signature="e#2273#2280#0" expanded="false" />
+            <element signature="n#!!block;n#sendMessage#0" expanded="false" />
+            <element signature="n#!!block;n#getUserMediaCallback#0" expanded="false" />
+            <element signature="e#2842#2900#0" expanded="false" />
+            <element signature="n#!!block;n#getUserMediaErrorCallback#0" expanded="false" />
+            <element signature="n#!!block;n#tryStartup#0" expanded="false" />
+            <element signature="e#3102#3279#0" expanded="false" />
+            <element signature="e#3237#3273#0" expanded="false" />
+            <element signature="n#!!block;n#createPeerConnection#0" expanded="false" />
+            <element signature="e#3370#3703#0" expanded="false" />
+            <element signature="e#3718#3820#0" expanded="false" />
+            <element signature="n#!!block;n#handleIceCandidate#0" expanded="false" />
+            <element signature="e#3951#4159#0" expanded="false" />
+            <element signature="e#3973#4145#0" expanded="false" />
+            <element signature="e#4165#4226#0" expanded="false" />
+            <element signature="n#!!block;n#handleRemoteStreamAdded#0" expanded="false" />
+            <element signature="n#!!block;n#handleRemoteStreamRemoved#0" expanded="false" />
+            <element signature="n#!!block;n#startCall#0" expanded="false" />
+            <element signature="n#!!block;n#startAnswer#0" expanded="false" />
+            <element signature="n#!!block;n#setLocalAndSendMessage#0" expanded="false" />
+            <element signature="n#!!block;n#handleCreateOfferError#0" expanded="false" />
+            <element signature="n#!!block;n#preferOpus#0" expanded="false" />
+            <element signature="e#5493#5609#0" expanded="false" />
+            <element signature="e#5545#5603#0" expanded="false" />
+            <element signature="e#5639#5666#0" expanded="false" />
+            <element signature="e#5772#6077#0" expanded="false" />
+            <element signature="e#5827#6071#0" expanded="false" />
+            <element signature="e#5936#6042#0" expanded="false" />
+            <element signature="n#!!block;n#extractSdp#0" expanded="false" />
+            <element signature="n#!!block;n#setDefaultCodec#0" expanded="false" />
+            <element signature="e#6577#6833#0" expanded="false" />
+            <element signature="e#6604#6734#0" expanded="false" />
+            <element signature="e#6772#6827#0" expanded="false" />
+            <element signature="n#!!block;n#removeCN#0" expanded="false" />
+            <element signature="e#7130#7516#0" expanded="false" />
+            <element signature="e#7227#7510#0" expanded="false" />
+            <element signature="e#7315#7428#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1173" max-vertical-offset="1394">
+          <caret line="69" column="7" selection-start-line="69" selection-start-column="7" selection-end-line="69" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/home/room.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="289">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/home/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="408">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="364" max-vertical-offset="1428">
           <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
-          <folding>
-            <element signature="e#802#871#0" expanded="false" />
-            <element signature="e#1136#2254#0" expanded="false" />
-            <element signature="e#1224#1291#0" expanded="false" />
-            <element signature="e#1568#1867#0" expanded="false" />
-            <element signature="e#1600#1747#0" expanded="false" />
-            <element signature="e#1907#2118#0" expanded="false" />
-            <element signature="e#2132#2185#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -511,6 +688,7 @@
             <element signature="e#2273#2280#0" expanded="false" />
             <element signature="n#!!block;n#sendMessage#0" expanded="false" />
             <element signature="n#!!block;n#getUserMediaCallback#0" expanded="false" />
+            <element signature="e#2842#2900#0" expanded="false" />
             <element signature="n#!!block;n#getUserMediaErrorCallback#0" expanded="false" />
             <element signature="n#!!block;n#tryStartup#0" expanded="false" />
             <element signature="e#3102#3279#0" expanded="false" />
@@ -552,15 +730,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="873" max-vertical-offset="1530">
           <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
-          <folding>
-            <element signature="e#802#871#0" expanded="false" />
-            <element signature="e#1136#2254#0" expanded="false" />
-            <element signature="e#1224#1291#0" expanded="false" />
-            <element signature="e#1568#1867#0" expanded="false" />
-            <element signature="e#1600#1747#0" expanded="false" />
-            <element signature="e#1907#2118#0" expanded="false" />
-            <element signature="e#2132#2185#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -590,6 +760,7 @@
             <element signature="e#2273#2280#0" expanded="false" />
             <element signature="n#!!block;n#sendMessage#0" expanded="false" />
             <element signature="n#!!block;n#getUserMediaCallback#0" expanded="false" />
+            <element signature="e#2842#2900#0" expanded="false" />
             <element signature="n#!!block;n#getUserMediaErrorCallback#0" expanded="false" />
             <element signature="n#!!block;n#tryStartup#0" expanded="false" />
             <element signature="e#3102#3279#0" expanded="false" />
@@ -631,15 +802,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1122">
           <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
-          <folding>
-            <element signature="e#802#871#0" expanded="false" />
-            <element signature="e#1136#2254#0" expanded="false" />
-            <element signature="e#1224#1291#0" expanded="false" />
-            <element signature="e#1568#1867#0" expanded="false" />
-            <element signature="e#1600#1747#0" expanded="false" />
-            <element signature="e#1907#2118#0" expanded="false" />
-            <element signature="e#2132#2185#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -654,15 +817,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1105">
           <caret line="22" column="41" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-          <folding>
-            <element signature="e#802#871#0" expanded="false" />
-            <element signature="e#1136#2254#0" expanded="false" />
-            <element signature="e#1224#1291#0" expanded="false" />
-            <element signature="e#1568#1867#0" expanded="false" />
-            <element signature="e#1600#1747#0" expanded="false" />
-            <element signature="e#1907#2118#0" expanded="false" />
-            <element signature="e#2132#2185#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -670,7 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="476">
           <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -700,6 +854,7 @@
             <element signature="e#2273#2280#0" expanded="false" />
             <element signature="n#!!block;n#sendMessage#0" expanded="false" />
             <element signature="n#!!block;n#getUserMediaCallback#0" expanded="false" />
+            <element signature="e#2842#2900#0" expanded="false" />
             <element signature="n#!!block;n#getUserMediaErrorCallback#0" expanded="false" />
             <element signature="n#!!block;n#tryStartup#0" expanded="false" />
             <element signature="e#3102#3279#0" expanded="false" />
@@ -741,15 +896,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1122">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#802#871#0" expanded="false" />
-            <element signature="e#1136#2254#0" expanded="false" />
-            <element signature="e#1224#1291#0" expanded="false" />
-            <element signature="e#1568#1867#0" expanded="false" />
-            <element signature="e#1600#1747#0" expanded="false" />
-            <element signature="e#1907#2118#0" expanded="false" />
-            <element signature="e#2132#2185#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -774,13 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09537167" vertical-offset="0" max-vertical-offset="713">
-          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.7713126" vertical-offset="570" max-vertical-offset="1360">
@@ -795,10 +935,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/utils/utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45033112" vertical-offset="0" max-vertical-offset="476">
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9230769" vertical-offset="1191" max-vertical-offset="1904">
-          <caret line="73" column="11" selection-start-line="73" selection-start-column="11" selection-end-line="73" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.12201963" vertical-offset="32" max-vertical-offset="2057">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09537167" vertical-offset="0" max-vertical-offset="713">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -810,25 +974,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19318181" vertical-offset="0" max-vertical-offset="440">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45033112" vertical-offset="0" max-vertical-offset="476">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18444847" vertical-offset="0" max-vertical-offset="553">
+        <state vertical-scroll-proportion="0.13802436" vertical-offset="0" max-vertical-offset="739">
           <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
           <folding />
         </state>
@@ -836,8 +984,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/home/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3381555" vertical-offset="0" max-vertical-offset="553">
-          <caret line="11" column="130" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="130" />
+        <state vertical-scroll-proportion="0.20703654" vertical-offset="0" max-vertical-offset="739">
+          <caret line="9" column="70" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
           <folding />
         </state>
       </provider>
@@ -845,15 +993,15 @@
     <entry file="file://$PROJECT_DIR$/views/home/room.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/hoot.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1887">
-          <caret line="295" column="56" selection-start-line="295" selection-start-column="47" selection-end-line="295" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="178" max-vertical-offset="2159">
+          <caret line="93" column="29" selection-start-line="93" selection-start-column="29" selection-end-line="93" selection-end-column="29" />
           <folding>
             <element signature="e#135#214#0" expanded="false" />
             <element signature="e#155#212#0" expanded="false" />
@@ -876,6 +1024,7 @@
             <element signature="e#2273#2280#0" expanded="false" />
             <element signature="n#!!block;n#sendMessage#0" expanded="false" />
             <element signature="n#!!block;n#getUserMediaCallback#0" expanded="false" />
+            <element signature="e#2842#2900#0" expanded="false" />
             <element signature="n#!!block;n#getUserMediaErrorCallback#0" expanded="false" />
             <element signature="n#!!block;n#tryStartup#0" expanded="false" />
             <element signature="e#3102#3279#0" expanded="false" />
@@ -915,17 +1064,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32730561" vertical-offset="227" max-vertical-offset="799">
-          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
-          <folding>
-            <element signature="e#802#871#0" expanded="false" />
-            <element signature="e#1136#2254#0" expanded="false" />
-            <element signature="e#1224#1291#0" expanded="false" />
-            <element signature="e#1568#1867#0" expanded="false" />
-            <element signature="e#1600#1747#0" expanded="false" />
-            <element signature="e#1907#2118#0" expanded="false" />
-            <element signature="e#2132#2185#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.676311" vertical-offset="0" max-vertical-offset="1428">
+          <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
