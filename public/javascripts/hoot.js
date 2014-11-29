@@ -20,6 +20,15 @@ var roomName = window.location.pathname.replace('/', '');
 var room;
 
 
+////////// TURN SERVER //////////
+peerConnectionConfig.iceServers.push({
+    'url': 'turn:1417373716:hoot@turn:23.251.129.26:3478?transport=udp',
+    'credential': 'dDWJZe4ROGWpC5bXMDjZn3nZN/I='
+});
+
+console.log(JSON.stringify(peerConnectionConfig));
+
+
 ////////// ROOMS //////////
 if (roomName !== '') {
     console.log('CLIENT:    Connecting to room', roomName);
