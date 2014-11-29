@@ -1,9 +1,9 @@
 extends ../layout.jade
 
 block content
-    div(id='image-background')
+    div(class='image-background')
         div(id='form-container')
-            form(action='/room', method='POST', class='paper-1', id='form-home-login', name='form-home-login')
+            form(action='/room', method='POST', id='form-home-login', name='form-home-login')
                 section
                     h1 This is Hoot.
                 div(id='fab-home-login')
@@ -14,6 +14,6 @@ block content
 
                 section
                     label(for='home-login-roomname') Enter a roomname to start.
-                    input(id='home-login-roomname', name='roomname' type='text', placeholder='Room', autocomplete='off', value='')
+                    input(id='home-login-roomname', name='roomname' type='text', placeholder='Room', autocomplete='off', autofocus='autofocus', value='')
 
     script(src='/javascripts/index.js')

@@ -1,12 +1,18 @@
 extends ../layout.jade
 block content
-    video(id='localVideo', autoplay='autoplay', muted='muted', style='width: 150px; height: 100px;')
-    video(id='remoteVideo', autoplay='autoplay', style='width: 150px; height: 100px;')
+    div(class='image-background')
+        div(class='room-content-container')
+            section
+                h1 This is you
+                video(id='local-video', autoplay='autoplay', muted='muted')
 
-    input(id='room-chat-input', name='message' type='text', autocomplete='off', value='')
-    article(id='room-chat-local-container')
-        h1 Local chat room
-    article(id='room-chat-remote-container')
-        h2 Remote chat room
+                input(id='room-chat-input', name='message' type='text', placeholder='Say something cool', autocomplete='off', value='', disabled)
+
+                article(id='local-chat-container')
+            section
+                h1 Your friend
+                video(id='remote-video', autoplay='autoplay', muted='muted')
+
+                article(id='remote-chat-container')
 
     script(src='/javascripts/hoot.js')

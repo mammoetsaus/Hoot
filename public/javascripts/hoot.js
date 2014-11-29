@@ -46,6 +46,8 @@ socket.on('p2p-setup-done', function (data){
 
     room = data;
     isChannelReady = true;
+
+    enableChat();
 });
 
 socket.on('p2p-room-full', function (){
@@ -61,6 +63,13 @@ function getRandomKey(length) {
         result += charSet.substring(pos,pos+1);
     }
     return result;
+}
+
+function enableChat() {
+    var inputElement = document.getElementById('room-chat-input');
+    inputElement.disabled = false;
+    inputElement.style.opacity = 1;
+    inputElement.focus();
 }
 
 
@@ -97,8 +106,8 @@ function sendMessage(message, room) {
 
 
 ////////// SETUP LOCAL //////////
-var localVideo = document.querySelector('#localVideo');
-var remoteVideo = document.querySelector('#remoteVideo');
+var localVideo = document.querySelector('#local-video');
+var remoteVideo = document.querySelector('#remote-video');
 
 navigator.getUserMedia = navigator.webkitGetUserMedia;
 navigator.getUserMedia({audio: true, video: true}, getUserMediaCallback, getUserMediaErrorCallback);
@@ -287,18 +296,42 @@ document.getElementById('room-chat-input').onkeypress = function(e){
 };
 
 socket.on('chat-message', function(chat) {
-    var localChatContainer = document.getElementById('room-chat-local-container');
-    var remoteChatContainer = document.getElementById('room-chat-remote-container');
+    var localChatContainer = document.getElementById('local-chat-container');
+    var remoteChatContainer = document.getElementById('remote-chat-container');
 
     console.log(JSON.stringify(chat));
 
     if (chat.origin === userID) {
-        localChatContainer.insertAdjacentHTML('beforeend', '<p>' + chat.message + '</p>');
+        if (isValidUrl(chat.message)) {
+            localChatContainer.insertAdjacentHTML('afterbegin', '<a href="' + chat.message +'" target="_blank">' + chat.message + '</a>');
+        }
+        else {
+            localChatContainer.insertAdjacentHTML('afterbegin', '<p>' + chat.message + '</p>');
+        }
     }
     else {
-        remoteChatContainer.insertAdjacentHTML('beforeend', '<p>' + chat.message + '</p>');
+        if (isValidUrl(chat.message)) {
+            remoteChatContainer.insertAdjacentHTML('afterbegin', '<a href="' + chat.message +'"target="_blank">' + chat.message + '</a>');
+        }
+        else {
+            remoteChatContainer.insertAdjacentHTML('afterbegin', '<p>' + chat.message + '</p>');
+        }
     }
 });
+
+function isValidUrl(str) {
+    var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+        '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+        '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+        '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+        '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+        '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+    if(!pattern.test(str)) {
+        return false;
+    } else {
+        return true;
+    }
+}
 
 document.getElementById('remoteVideo').onclick = function () {
     var buzzerObj = {
@@ -310,8 +343,18 @@ document.getElementById('remoteVideo').onclick = function () {
 
 socket.on('buzzer-message', function(buzzer) {
     if (buzzer.origin === userID) {
+        var remoteVideo = document.getElementById('remoteVideo');
+        remoteVideo.classList.add("buzzer");
+        setTimeout(function() {
+            remoteVideo.classList.remove("buzzer");
+        }, 500)
     }
     else {
-        alert("BUZZERS!");
+        console.log("do buzzer");
+        var remoteVideo = document.getElementById('remoteVideo');
+        remoteVideo.classList.add("buzzer");
+        setTimeout(function() {
+            remoteVideo.classList.remove("buzzer");
+        }, 500);
     }
 });

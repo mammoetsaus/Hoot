@@ -5,17 +5,17 @@ $main-blue:             #3F51B5;
 $second-pink:           #E91E63;
 $second-pink-accent:    #F50057;
 $plain-white:           #FFFFFF;
+$placeholder-white:      #DDDDDD;
 $border-grey:           #333333;
-////////////////
 
-
+///// GLOBAL /////
 * {
   margin: 0;
   padding: 0;
   font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial;
 }
 
-#image-background {
+.image-background {
   position: fixed;
   z-index: -999;
   width: 100%;
@@ -26,6 +26,16 @@ $border-grey:           #333333;
   background-image: url('../images/background_flou.jpg');
 }
 
+.room-content-container {
+  width: 1024px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  top: 20%;
+}
+
+
+///// HOME /////
 #form-container {
   position: relative;
   top: 20%;
@@ -38,6 +48,8 @@ $border-grey:           #333333;
   height: 300px;
 
   margin: 0 auto;
+
+  @include z-depth(1);
 }
 
 #form-container form h1 {
@@ -111,6 +123,190 @@ $border-grey:           #333333;
   margin: 4px 0 0 4px;
 }
 
-.paper-1 {
+
+///// ROOM /////
+.room-content-container section {
+  float: left;
+  width: 50%;
+}
+
+.room-content-container section h1 {
+  position: relative;
+  width: 300px;
+  height: 50px;
+
+  padding: 0 10px;
+
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 50px;
+  color: $plain-white;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+
+  background-color: $main-blue;
+
+  z-index: 1;
   @include z-depth(1);
+}
+
+.room-content-container section video {
+  width: 320px;
+  height: 240px;
+
+  background-color: $plain-white;
+
+  @include z-depth(1);
+}
+
+.room-content-container section:nth-child(2) h1 {
+  float: right;
+}
+
+.room-content-container section:nth-child(2) video {
+  float: right;
+}
+
+.room-content-container section:nth-child(1) input[type="text"] {
+  width: 300px;
+  height: 40px;
+
+  position: relative;
+  top: 9px;
+  padding: 0 10px;
+
+  color: $plain-white;
+  background-color: $second-pink;
+
+  opacity: 0.5;
+
+  border: none;
+
+  @include z-depth(1);
+}
+
+.room-content-container section:nth-child(1) input[type="text"]:focus {
+  outline: 0;
+}
+
+.room-content-container section:nth-child(1) input::-webkit-input-placeholder {
+  color:    $placeholder-white;
+}
+
+.room-content-container section article {
+  width: 320px;
+
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+
+.room-content-container section article::-webkit-scrollbar{
+  width:5px;
+}
+
+.room-content-container section article::-webkit-scrollbar-thumb{
+  background-color: $plain-white;
+
+  @include z-depth(1);
+}
+
+.room-content-container section article::-webkit-scrollbar-thumb:hover{
+  background-color: $second-pink;
+}
+
+.room-content-container section article::-webkit-scrollbar-thumb:active{
+  background-color: $second-pink-accent;
+}
+
+.room-content-container section:nth-child(1) article {
+  position: relative;
+  height: 211px;
+  top: 22px;
+}
+
+.room-content-container section:nth-child(2) article {
+  float: right;
+  position: relative;
+  height: 267px;
+  top: 13px;
+}
+
+.room-content-container section article p {
+  width: 290px;
+  min-height: 12px;
+  margin: 0 0 13px 0;
+  padding: 14px 10px;
+
+  font-size: 13px;
+  word-wrap: break-word;
+
+  background-color: $plain-white;
+
+  @include z-depth(1);
+}
+
+.room-content-container section article a {
+  display: inline-block;
+  width: 290px;
+  min-height: 12px;
+  margin: 0 0 13px 0;
+  padding: 14px 10px;
+
+  font-size: 13px;
+  word-wrap: break-word;
+  text-decoration: underline;
+  color: $main-blue;
+
+  background-color: $plain-white;
+
+  @include z-depth(1);
+}
+
+.room-content-container section article a:focus {
+  outline: none;
+}
+
+
+///// ANIMATIONS /////
+.buzzer-animation {
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: buzzer;
+  -animation-name: buzzer;
+}
+
+@-webkit-keyframes buzzer {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+  }
+
+  20%, 60% {
+    -webkit-transform: translateX(-10px);
+  }
+
+  40%, 80% {
+    -webkit-transform: translateX(10px);
+  }
+}
+
+@keyframes buzzer {
+  0%, 100% {
+    transform: translateX(0);
+  }
+
+  20%, 60% {
+    transform: translateX(-5px);
+  }
+
+  40%, 80% {
+    transform: translateX(5px);
+  }
 }
