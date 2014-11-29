@@ -47,7 +47,7 @@ socket.on('p2p-setup-done', function (data){
     room = data;
     isChannelReady = true;
 
-    enableChat();
+    enableControls();
 });
 
 socket.on('p2p-room-full', function (){
@@ -65,11 +65,22 @@ function getRandomKey(length) {
     return result;
 }
 
-function enableChat() {
+function enableControls() {
     var inputElement = document.getElementById('room-chat-input');
     inputElement.disabled = false;
     inputElement.style.opacity = 1;
     inputElement.focus();
+
+    var buzzerElement = document.getElementById('fab-room-buzzer');
+    buzzerElement.style.display = "block";
+
+    document.getElementById('fab-room-buzzer').onclick = function () {
+        var buzzerObj = {
+            origin: userID
+        };
+
+        socket.emit('buzzer-message', buzzerObj, room);
+    };
 }
 
 
@@ -333,28 +344,22 @@ function isValidUrl(str) {
     }
 }
 
-document.getElementById('remoteVideo').onclick = function () {
-    var buzzerObj = {
-        origin: userID
-    };
-
-    socket.emit('buzzer-message', buzzerObj, room);
-};
-
 socket.on('buzzer-message', function(buzzer) {
+    var buzzerSound = document.getElementById('sound-buzzer');
+    buzzerSound.play();
+
     if (buzzer.origin === userID) {
-        var remoteVideo = document.getElementById('remoteVideo');
-        remoteVideo.classList.add("buzzer");
+        var remoteVideo = document.getElementById('remote-video');
+        remoteVideo.classList.add("buzzer-animation");
         setTimeout(function() {
-            remoteVideo.classList.remove("buzzer");
-        }, 500)
+            remoteVideo.classList.remove("buzzer-animation");
+        }, 500);
     }
     else {
-        console.log("do buzzer");
-        var remoteVideo = document.getElementById('remoteVideo');
-        remoteVideo.classList.add("buzzer");
+        var container = document.getElementById('room-content-container');
+        container.classList.add("buzzer-animation");
         setTimeout(function() {
-            remoteVideo.classList.remove("buzzer");
+            container.classList.remove("buzzer-animation");
         }, 500);
     }
 });

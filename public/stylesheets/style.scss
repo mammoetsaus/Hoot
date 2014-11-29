@@ -26,7 +26,7 @@ $border-grey:           #333333;
   background-image: url('../images/background_flou.jpg');
 }
 
-.room-content-container {
+#room-content-container {
   width: 1024px;
   margin: 0 auto;
   display: block;
@@ -125,12 +125,12 @@ $border-grey:           #333333;
 
 
 ///// ROOM /////
-.room-content-container section {
+#room-content-container section {
   float: left;
   width: 50%;
 }
 
-.room-content-container section h1 {
+#room-content-container section h1 {
   position: relative;
   width: 300px;
   height: 50px;
@@ -156,7 +156,7 @@ $border-grey:           #333333;
   @include z-depth(1);
 }
 
-.room-content-container section video {
+#room-content-container section video {
   width: 320px;
   height: 240px;
 
@@ -165,23 +165,26 @@ $border-grey:           #333333;
   @include z-depth(1);
 }
 
-.room-content-container section:nth-child(2) h1 {
+#room-content-container section:nth-child(2) h1 {
   float: right;
 }
 
-.room-content-container section:nth-child(2) video {
+#room-content-container section:nth-child(2) video {
   float: right;
 }
 
-.room-content-container section:nth-child(1) input[type="text"] {
-  width: 300px;
+#room-content-container section:nth-child(1) input[type="text"] {
+  width: 275px;
   height: 40px;
 
   position: relative;
   top: 9px;
-  padding: 0 10px;
+  padding: 0 10px 0 35px;
 
   color: $plain-white;
+  background-image:url('../images/icon_message.png');
+  background-repeat: no-repeat;
+  background-position: 10px 13px;
   background-color: $second-pink;
 
   opacity: 0.5;
@@ -191,53 +194,53 @@ $border-grey:           #333333;
   @include z-depth(1);
 }
 
-.room-content-container section:nth-child(1) input[type="text"]:focus {
+#room-content-container section:nth-child(1) input[type="text"]:focus {
   outline: 0;
 }
 
-.room-content-container section:nth-child(1) input::-webkit-input-placeholder {
+#room-content-container section:nth-child(1) input::-webkit-input-placeholder {
   color:    $placeholder-white;
 }
 
-.room-content-container section article {
+#room-content-container section article {
   width: 320px;
 
   overflow-y: visible;
   overflow-x: hidden;
 }
 
-.room-content-container section article::-webkit-scrollbar{
+#room-content-container section article::-webkit-scrollbar{
   width:5px;
 }
 
-.room-content-container section article::-webkit-scrollbar-thumb{
+#room-content-container section article::-webkit-scrollbar-thumb{
   background-color: $plain-white;
 
   @include z-depth(1);
 }
 
-.room-content-container section article::-webkit-scrollbar-thumb:hover{
+#room-content-container section article::-webkit-scrollbar-thumb:hover{
   background-color: $second-pink;
 }
 
-.room-content-container section article::-webkit-scrollbar-thumb:active{
+#room-content-container section article::-webkit-scrollbar-thumb:active{
   background-color: $second-pink-accent;
 }
 
-.room-content-container section:nth-child(1) article {
+#room-content-container section:nth-child(1) article {
   position: relative;
   height: 211px;
   top: 22px;
 }
 
-.room-content-container section:nth-child(2) article {
+#room-content-container section:nth-child(2) article {
   float: right;
   position: relative;
   height: 267px;
   top: 13px;
 }
 
-.room-content-container section article p {
+#room-content-container section article p {
   width: 290px;
   min-height: 12px;
   margin: 0 0 13px 0;
@@ -251,7 +254,7 @@ $border-grey:           #333333;
   @include z-depth(1);
 }
 
-.room-content-container section article a {
+#room-content-container section article a {
   display: inline-block;
   width: 290px;
   min-height: 12px;
@@ -268,8 +271,32 @@ $border-grey:           #333333;
   @include z-depth(1);
 }
 
-.room-content-container section article a:focus {
+#room-content-container section article a:focus {
   outline: none;
+}
+
+#fab-room-buzzer {
+  display: none;
+  position: relative;
+  width: 36px;
+  height: 36px;
+  border-radius: 36px;
+  background-color: $second-pink;
+
+  top: 32px;
+  left: 466px;
+
+  z-index: 999;
+  @include z-depth(1);
+  @include z-depth-animation(2);
+}
+
+#fab-room-buzzer:hover {
+  background-color: $second-pink-accent;
+}
+
+#fab-room-buzzer svg {
+  margin: 6px 0 0 6px;
 }
 
 
@@ -284,29 +311,15 @@ $border-grey:           #333333;
 }
 
 @-webkit-keyframes buzzer {
-  0%, 100% {
-    -webkit-transform: translateX(0);
-  }
-
-  20%, 60% {
-    -webkit-transform: translateX(-10px);
-  }
-
-  40%, 80% {
-    -webkit-transform: translateX(10px);
-  }
-}
-
-@keyframes buzzer {
-  0%, 100% {
-    transform: translateX(0);
-  }
-
-  20%, 60% {
-    transform: translateX(-5px);
-  }
-
-  40%, 80% {
-    transform: translateX(5px);
-  }
+  0% { -webkit-transform: translate(2px, 1px) rotate(0deg); }
+  10% { -webkit-transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { -webkit-transform: translate(-3px, 0px) rotate(1deg); }
+  30% { -webkit-transform: translate(0px, 2px) rotate(0deg); }
+  40% { -webkit-transform: translate(1px, -1px) rotate(1deg); }
+  50% { -webkit-transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { -webkit-transform: translate(-3px, 1px) rotate(0deg); }
+  70% { -webkit-transform: translate(2px, 1px) rotate(-1deg); }
+  80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
+  90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
+  100% { -webkit-transform: translate(1px, -2px) rotate(-1deg); }
 }

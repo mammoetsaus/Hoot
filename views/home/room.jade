@@ -1,17 +1,25 @@
 extends ../layout.jade
 block content
     div(class='image-background')
-        div(class='room-content-container')
+        div(id='room-content-container')
             section
                 h1 This is you
                 video(id='local-video', autoplay='autoplay', muted='muted')
 
-                input(id='room-chat-input', name='message' type='text', placeholder='Say something cool', autocomplete='off', value='', disabled)
+                input(id='room-chat-input', name='message' type='text', placeholder='Say something cool!', autocomplete='off', value='', disabled)
 
                 article(id='local-chat-container')
             section
                 h1 Your friend
-                video(id='remote-video', autoplay='autoplay', muted='muted')
+                video(id='remote-video', autoplay='autoplay')
+                div(id='fab-room-buzzer')
+                    |<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">
+                    |    <path d="M0 0h48v48h-48z" fill="none"/>
+                    |    <path d="M14 4v22h6v18l14-24h-8l8-16z" fill="#ffffff"/>
+                    |</svg>
+
+                audio(id='sound-buzzer', src='/audio/buzzer.mp3', type='audio/mpeg')
+
 
                 article(id='remote-chat-container')
 
