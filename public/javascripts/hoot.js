@@ -3,7 +3,19 @@ var localStream, remoteStream, peerConnection;
 
 var peerConnectionConfig = {
     'iceServers': [
-        { 'url': 'stun:stun.l.google.com:19302' }
+        {
+            'url': 'stun:stun.l.google.com:19302'
+        },
+        {
+            'url': 'turn:192.158.30.23:3478?transport=udp',
+            'credential': '0MGZpeb8Z8yjT+aLlwIPkLqfQEI=',
+            'username': '1417376336:hoot'
+        },
+        {
+            'url': 'turn:192.158.30.23:3478?transport=tcp',
+            'credential': '0MGZpeb8Z8yjT+aLlwIPkLqfQEI=',
+            'username': '1417376336:hoot'
+        }
     ]
 };
 var sdpConstraints = {
