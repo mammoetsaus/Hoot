@@ -5,7 +5,7 @@ $main-blue:             #3F51B5;
 $second-pink:           #E91E63;
 $second-pink-accent:    #F50057;
 $plain-white:           #FFFFFF;
-$placeholder-white:      #DDDDDD;
+$placeholder-white:     #DDDDDD;
 $border-grey:           #333333;
 
 ///// GLOBAL /////
@@ -273,6 +273,43 @@ $border-grey:           #333333;
 
 #room-content-container section article a:focus {
   outline: none;
+}
+
+#room-link {
+  position: absolute;
+  top: -120px;
+  left: 410px;
+}
+
+#room-link input {
+  float: left;
+  width: 175px;
+  height: 20px;
+  padding: 5px 0 5px 5px;
+  font-size: 12px;
+  overflow: hidden;
+  border: none;
+
+  @include z-depth(1);
+}
+
+#room-link div {
+  position: relative;
+  float: left;
+  height: 30px;
+  width: 30px;
+  background-color: $second-pink;
+
+  @include z-depth(1);
+}
+
+#room-link div:hover {
+  background-color: $second-pink-accent;
+  cursor: pointer;
+}
+
+#room-link div svg {
+  margin: 5px 0 0 5px;
 }
 
 #fab-room-buzzer {

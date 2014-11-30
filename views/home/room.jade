@@ -6,7 +6,7 @@ block content
                 h1 This is you
                 video(id='local-video', autoplay='autoplay', muted='muted')
 
-                input(id='room-chat-input', name='message' type='text', placeholder='Say something cool!', autocomplete='off', value='', disabled)
+                input(id='room-chat-input', name='message' type='text', placeholder='Say something cool!', autocomplete='off', autocorrect="off", value='', disabled)
 
                 article(id='local-chat-container')
             section
@@ -20,7 +20,15 @@ block content
 
                 audio(id='sound-buzzer', src='/audio/buzzer.mp3', type='audio/mpeg')
 
-
                 article(id='remote-chat-container')
+
+            div(id='room-link', title="Copy link")
+                input(id='room-link-text', readonly='readonly', value='http://hoot.azurewebsites.net/haha', onClick='this.select();')
+                div(id='room-link-copy')
+                    |<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 48 48">
+                    |    <path d="M0 0h48v48h-48z" fill="none"/>
+                    |    <path d="M32 2h-24c-2.21 0-4 1.79-4 4v28h4v-28h24v-4zm6 8h-22c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h22c2.21 0 4-1.79 4-4v-28c0-2.21-1.79-4-4-4zm0 32h-22v-28h22v28z" fill="#ffffff"/>
+                    |</svg>
+
 
     script(src='/javascripts/hoot.js')

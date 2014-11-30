@@ -309,7 +309,6 @@ function removeCN(sdpLines, mLineIndex) {
 }
 
 
-
 ////////// PAGE ///////////
 window.onbeforeunload = function(e) {
     socket.emit('quit', userID, room);
@@ -329,6 +328,14 @@ document.getElementById('room-chat-input').onkeypress = function(e){
         socket.emit('chat-message', chatObj, room);
         inputLocalChat.value = '';
     }
+};
+
+document.getElementById('room-link-copy').onclick = function(e) {
+    console.log("copying the shit");
+    var item = document.getElementById('room-link-text');
+    item.select();
+
+    document.execCommand('copy', null, '');
 };
 
 socket.on('chat-message', function(chat) {
@@ -355,20 +362,6 @@ socket.on('chat-message', function(chat) {
     }
 });
 
-function isValidUrl(str) {
-    var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
-        '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
-        '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
-        '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
-        '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
-        '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
-    if(!pattern.test(str)) {
-        return false;
-    } else {
-        return true;
-    }
-}
-
 socket.on('buzzer-message', function(buzzer) {
     var buzzerSound = document.getElementById('sound-buzzer');
     buzzerSound.play();
@@ -388,3 +381,17 @@ socket.on('buzzer-message', function(buzzer) {
         }, 500);
     }
 });
+
+function isValidUrl(str) {
+    var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
+        '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
+        '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
+        '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
+        '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
+        '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
+    if(!pattern.test(str)) {
+        return false;
+    } else {
+        return true;
+    }
+}
