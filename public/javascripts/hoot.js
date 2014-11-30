@@ -32,15 +32,6 @@ var roomName = window.location.pathname.replace('/', '');
 var room;
 
 
-////////// TURN SERVER //////////
-peerConnectionConfig.iceServers.push({
-    'url': 'turn:1417373716:hoot@turn:23.251.129.26:3478?transport=udp',
-    'credential': 'dDWJZe4ROGWpC5bXMDjZn3nZN/I='
-});
-
-console.log(JSON.stringify(peerConnectionConfig));
-
-
 ////////// ROOMS //////////
 if (roomName !== '') {
     console.log('CLIENT:    Connecting to room', roomName);
@@ -128,8 +119,17 @@ socket.on('p2p-message', function(message) {
         });
         peerConnection.addIceCandidate(candidate);
     }
-    else if (message === 'bye' && isStarted) {
-    }
+});
+
+socket.on('quit', function() {
+    isInitiator = true;
+    isStarted = false;
+    isChannelReady = false;
+
+    peerConnection.close();
+    peerConnection = null;
+
+    tryStartup();
 });
 
 function sendMessage(message, room) {
@@ -311,6 +311,10 @@ function removeCN(sdpLines, mLineIndex) {
 
 
 ////////// PAGE ///////////
+window.onbeforeunload = function(e) {
+    socket.emit('quit', userID, room);
+}
+
 document.getElementById('room-chat-input').onkeypress = function(e){
     if (!e) e = window.event;
     var keyCode = e.keyCode || e.which;

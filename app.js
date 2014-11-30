@@ -20,7 +20,6 @@ homeController = require('./routes/index.js')(app);
 var rooms = {};
 
 app.set('domain', 'hoot.azurewebsites.net');
-//app.set('domain', '192.168.1.4');
 app.set('port', process.env.PORT || 3000);
 var server = app.listen(app.get('port'), function() {
     utils.log("Server started on port " + server.address().port);
@@ -73,6 +72,24 @@ io.sockets.on('connection', function(socket) {
 
     socket.on('buzzer-message', function(buzzer, room) {
         io.to(room.name).emit('buzzer-message', buzzer);
+    });
+
+    socket.on('quit', function (userID, room) {
+        if (rooms[room.name].initiator === userID) {
+            rooms[room.name].initiator = null;
+            rooms[room.name].clients--;
+        }
+        else if (rooms[room.name].callee === userID) {
+            rooms[room.name].callee = null;
+            rooms[room.name].clients--;
+        }
+
+        if (rooms[room.name].clients === 0) {
+            delete rooms[room.name];
+        }
+        else {
+            io.to(room.name).emit('quit');
+        }
     });
 });
 
