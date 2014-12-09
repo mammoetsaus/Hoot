@@ -1,10 +1,9 @@
 var utils = require('./utils/utils.js');
-
+var context = require('./data/context/context.js');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
-
 
 var app = express();
 app.set('views', path.join(__dirname, 'views'));
@@ -13,7 +12,6 @@ app.use(favicon(__dirname + '/public/favicon.ico'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
-
 
 homeController = require('./routes/index.js')(app);
 
@@ -92,5 +90,6 @@ io.sockets.on('connection', function(socket) {
         }
     });
 });
+
 
 module.exports = app;

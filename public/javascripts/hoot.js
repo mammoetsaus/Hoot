@@ -36,14 +36,16 @@ var room;
 if (roomName !== '') {
     console.log('CLIENT:    Connecting to room', roomName);
 
-    userID = getRandomKey(8);
+    getRandomKey(8, function(key) {
+        userID = key;
 
-    var roomObj = {
-        name: roomName,
-        clientID: userID
-    };
+        var roomObj = {
+            name: roomName,
+            clientID: userID
+        };
 
-    socket.emit('create or join', roomObj);
+        socket.emit('create or join', roomObj);
+    });
 }
 
 socket.on('p2p-room-created', function (data){
@@ -66,7 +68,7 @@ socket.on('p2p-room-full', function (){
     console.log('CLIENT:    This room is full');
 });
 
-function getRandomKey(length) {
+function getRandomKey(length, gotKeyCallback) {
     var charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     var result = '';
 
@@ -74,7 +76,8 @@ function getRandomKey(length) {
         var pos = Math.floor(Math.random() * charSet.length);
         result += charSet.substring(pos,pos+1);
     }
-    return result;
+
+    gotKeyCallback(result);
 }
 
 function enableControls() {
@@ -345,20 +348,24 @@ socket.on('chat-message', function(chat) {
     console.log(JSON.stringify(chat));
 
     if (chat.origin === userID) {
-        if (isValidUrl(chat.message)) {
-            localChatContainer.insertAdjacentHTML('afterbegin', '<a href="' + chat.message +'" target="_blank">' + chat.message + '</a>');
-        }
-        else {
-            localChatContainer.insertAdjacentHTML('afterbegin', '<p>' + chat.message + '</p>');
-        }
+        checkUrl(chat.message, function(success) {
+            if (success) {
+                localChatContainer.insertAdjacentHTML('afterbegin', '<a href="' + chat.message +'" target="_blank">' + chat.message + '</a>');
+            }
+            else {
+                localChatContainer.insertAdjacentHTML('afterbegin', '<p>' + chat.message + '</p>');
+            }
+        });
     }
     else {
-        if (isValidUrl(chat.message)) {
-            remoteChatContainer.insertAdjacentHTML('afterbegin', '<a href="' + chat.message +'"target="_blank">' + chat.message + '</a>');
-        }
-        else {
-            remoteChatContainer.insertAdjacentHTML('afterbegin', '<p>' + chat.message + '</p>');
-        }
+        checkUrl(chat.message, function(success) {
+            if (success) {
+                remoteChatContainer.insertAdjacentHTML('afterbegin', '<a href="' + chat.message +'" target="_blank">' + chat.message + '</a>');
+            }
+            else {
+                remoteChatContainer.insertAdjacentHTML('afterbegin', '<p>' + chat.message + '</p>');
+            }
+        });
     }
 });
 
@@ -382,7 +389,7 @@ socket.on('buzzer-message', function(buzzer) {
     }
 });
 
-function isValidUrl(str) {
+function checkUrl(str, checkUrlCallback) {
     var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
         '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
         '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
@@ -390,8 +397,8 @@ function isValidUrl(str) {
         '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
         '(\\#[-a-z\\d_]*)?$','i'); // fragment locator
     if(!pattern.test(str)) {
-        return false;
+        checkUrlCallback(false);
     } else {
-        return true;
+        checkUrlCallback(true);
     }
 }
