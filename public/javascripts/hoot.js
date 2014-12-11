@@ -27,9 +27,8 @@ var sdpConstraints = {
 
 var socket = io.connect();
 
-var userID;
 var roomName = window.location.pathname.replace('/', '');
-var room;
+var room, userID;
 
 
 ////////// ROOMS //////////
