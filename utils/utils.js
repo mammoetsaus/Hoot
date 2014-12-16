@@ -3,7 +3,7 @@ Utils = (function() {
         console.log("SERVER:    " + message + ".");
     };
 
-    var getRandomKey = function(length) {
+    var getRandomKey = function (length, gotKeyCallback) {
         var charSet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         var result = '';
 
@@ -11,7 +11,8 @@ Utils = (function() {
             var pos = Math.floor(Math.random() * charSet.length);
             result += charSet.substring(pos,pos+1);
         }
-        return result;
+
+        gotKeyCallback(result);
     }
 
     return {

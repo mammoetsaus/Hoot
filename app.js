@@ -15,7 +15,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 homeController = require('./routes/index.js')(app);
 
-
 app.set('domain', 'hoot.azurewebsites.net');
 app.set('port', process.env.PORT || 3000);
 var server = app.listen(app.get('port'), function() {

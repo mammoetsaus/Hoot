@@ -6,6 +6,7 @@
     <file url="file://$PROJECT_DIR$/public/javascripts/hoot.js" libraries="{Node.js Globals, Node.js v0.10.32 Core Modules}" />
     <file url="file://$PROJECT_DIR$/public/javascripts/index.js" libraries="{Node.js Globals, Node.js v0.10.32 Core Modules}" />
     <file url="file://$PROJECT_DIR$/routes/index.js" libraries="{Node.js Globals, Node.js v0.10.32 Core Modules}" />
+    <file url="file://$PROJECT_DIR$/test/test.js" libraries="{Node.js Globals, Node.js v0.10.32 Core Modules}" />
   </component>
 </project>
 
