@@ -2,15 +2,15 @@ var genericRepository = function(model) {
     var generic = require('../models/' + model + '.js');
 
     all = function(resultCallback) {
-        generic.find({}).exec(function(err, document) {
+        generic.find({}).lean().exec(function(err, document) {
             if (err) console.log("All error: " + err);
 
-            resultCallback(document);
+            resultCallback(JSON.parse(document));
         });
     };
 
     getByID = function(id, resultCallback) {
-        generic.find({ _id: id }).exec(function(err, document) {
+        generic.find({ _id: id }).lean().exec(function(err, document) {
             if (err) console.log("GetByID error: " + err);
 
             resultCallback(document);
@@ -21,7 +21,7 @@ var genericRepository = function(model) {
         object.save(function(err, response) {
             if (err) console.log("Insert error: " + err);
 
-            resultCallback(response);
+            resultCallback(JSON.parse(response));
         });
     };
 
@@ -47,7 +47,7 @@ var genericRepository = function(model) {
                 document.remove(function(err, response) {
                     if (err) console.log("Delete error: " + err);
 
-                    resultCallback(response);
+                    resultCallback(JSON.parse(response));
                 })
             }
         });

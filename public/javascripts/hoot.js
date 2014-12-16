@@ -388,6 +388,14 @@ socket.on('buzzer-message', function(buzzer) {
     }
 });
 
+socket.on('update-stats', function(stat) {
+    var elements = document.getElementById('room-stats').getElementsByTagName("p");
+
+    elements[0].innerHTML = "Connections: " + stat[0].connections;
+    elements[1].innerHTML = "Messages: " + stat[0].messages;
+    elements[2].innerHTML = "Buzzers: " + stat[0].buzzers;
+});
+
 function checkUrl(str, checkUrlCallback) {
     var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
         '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name

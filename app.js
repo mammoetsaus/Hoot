@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var bodyParser = require('body-parser');
+var dbcon = require('./data/context/context.js');
 
 var app = express();
 app.set('views', path.join(__dirname, 'views'));
@@ -13,6 +14,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 homeController = require('./routes/index.js')(app);
+
 
 app.set('domain', 'hoot.azurewebsites.net');
 app.set('port', process.env.PORT || 3000);
