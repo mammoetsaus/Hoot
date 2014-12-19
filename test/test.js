@@ -12,28 +12,24 @@ describe('Key Generator', function () {
         });
     });
     describe('Unique values', function() {
-        it("10000 keys", function(done) {
+        it("should generate 100000 unique keys (mocha --timeout 150000)", function(done) {
             var keys = [];
 
-            for (var i = 0; i < 10000; i++) {
+            for (var i = 0; i < 100000; i++) {
                 utils.getRandomKey(8, function(result) {
                     keys.push(result);
                 });
             }
 
-            checkIfArrayIsUnique(keys);
+            var unigueKeys = keys.filter(onlyUnique);
+
+            assert.strictEqual(keys.length, unigueKeys.length);
 
             done();
         });
     });
 });
 
-function checkIfArrayIsUnique(arr)  {
-    for (var i = 0; i < arr.length; i++) {
-        if (arr.indexOf(arr[i]) !== arr.lastIndexOf(arr[i])) {
-            return false;
-        }
-    }
-
-    return true;
+function onlyUnique(value, index, self)  {
+    return self.indexOf(value) === index;
 }
