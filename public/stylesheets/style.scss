@@ -312,6 +312,33 @@ $border-grey:           #333333;
   margin: 5px 0 0 5px;
 }
 
+#room-stats {
+  position: absolute;
+  top: 65px;
+  left: 440px;
+
+  width: 150px;
+
+  background-color: $plain-white;
+
+  @include z-depth(1);
+}
+
+#room-stats h1 {
+  padding: 10px;
+  font-weight: 100;
+  font-size: 20px;
+
+  background-color: $main-blue;
+  color: $plain-white;
+
+  @include z-depth(1);
+}
+
+#room-stats p {
+  padding: 10px;
+}
+
 #fab-room-buzzer {
   display: none;
   position: relative;

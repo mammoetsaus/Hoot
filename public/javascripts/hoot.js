@@ -391,9 +391,9 @@ socket.on('buzzer-message', function(buzzer) {
 socket.on('update-stats', function(stat) {
     var elements = document.getElementById('room-stats').getElementsByTagName("p");
 
-    elements[0].innerHTML = "Connections: " + stat[0].connections;
-    elements[1].innerHTML = "Messages: " + stat[0].messages;
-    elements[2].innerHTML = "Buzzers: " + stat[0].buzzers;
+    elements[0].innerHTML = stat[0].connections + " connections";
+    elements[1].innerHTML = stat[0].messages + " messages";
+    elements[2].innerHTML = stat[0].buzzers + " buzzers";
 });
 
 function checkUrl(str, checkUrlCallback) {

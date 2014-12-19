@@ -231,6 +231,25 @@
 #room-link div svg {
   margin: 5px 0 0 5px; }
 
+#room-stats {
+  position: absolute;
+  top: 65px;
+  left: 440px;
+  width: 150px;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26); }
+
+#room-stats h1 {
+  padding: 10px;
+  font-weight: 100;
+  font-size: 20px;
+  background-color: #3F51B5;
+  color: #FFFFFF;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26); }
+
+#room-stats p {
+  padding: 10px; }
+
 #fab-room-buzzer {
   display: none;
   position: relative;

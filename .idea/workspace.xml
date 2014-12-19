@@ -23,15 +23,66 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="test.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/test.js">
+      <file leaf-file-name="room.jade" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/home/room.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13802436" vertical-offset="0" max-vertical-offset="739">
-              <caret line="30" column="3" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="765">
+              <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/style.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.713885" vertical-offset="970" max-vertical-offset="1853">
+              <caret line="314" column="12" selection-start-line="314" selection-start-column="12" selection-end-line="314" selection-end-column="12" />
               <folding>
-                <element signature="e#156#393#0" expanded="false" />
-                <element signature="e#437#893#0" expanded="false" />
-                <element signature="n#!!block;n#onlyUnique#0" expanded="false" />
+                <element signature="e#266#360#0" expanded="false" />
+                <element signature="e#380#604#0" expanded="false" />
+                <element signature="e#630#720#0" expanded="false" />
+                <element signature="e#756#793#0" expanded="false" />
+                <element signature="e#816#947#0" expanded="false" />
+                <element signature="e#973#1088#0" expanded="false" />
+                <element signature="e#1133#1247#0" expanded="false" />
+                <element signature="e#1276#1347#0" expanded="false" />
+                <element signature="e#1389#1640#0" expanded="false" />
+                <element signature="e#1688#1744#0" expanded="false" />
+                <element signature="e#1762#1962#0" expanded="false" />
+                <element signature="e#1986#2030#0" expanded="false" />
+                <element signature="e#2052#2078#0" expanded="false" />
+                <element signature="e#2130#2162#0" expanded="false" />
+                <element signature="e#2199#2611#0" expanded="false" />
+                <element signature="e#2651#2746#0" expanded="false" />
+                <element signature="e#2796#2815#0" expanded="false" />
+                <element signature="e#2868#2887#0" expanded="false" />
+                <element signature="e#2953#3285#0" expanded="false" />
+                <element signature="e#3357#3374#0" expanded="false" />
+                <element signature="e#3454#3489#0" expanded="false" />
+                <element signature="e#3531#3596#0" expanded="false" />
+                <element signature="e#3656#3672#0" expanded="false" />
+                <element signature="e#3738#3799#0" expanded="false" />
+                <element signature="e#3871#3908#0" expanded="false" />
+                <element signature="e#3981#4025#0" expanded="false" />
+                <element signature="e#4080#4135#0" expanded="false" />
+                <element signature="e#4190#4261#0" expanded="false" />
+                <element signature="e#4305#4492#0" expanded="false" />
+                <element signature="e#4536#4799#0" expanded="false" />
+                <element signature="e#4849#4869#0" expanded="false" />
+                <element signature="e#4882#4937#0" expanded="false" />
+                <element signature="e#4956#5111#0" expanded="false" />
+                <element signature="e#5128#5257#0" expanded="false" />
+                <element signature="e#5280#5343#0" expanded="false" />
+                <element signature="e#5364#5390#0" expanded="false" />
+                <element signature="e#5404#5533#0" expanded="false" />
+                <element signature="e#5550#5689#0" expanded="false" />
+                <element signature="e#5705#5725#0" expanded="false" />
+                <element signature="e#5744#5976#0" expanded="false" />
+                <element signature="e#6001#6045#0" expanded="false" />
+                <element signature="e#6068#6094#0" expanded="false" />
+                <element signature="e#6138#6332#0" expanded="false" />
+                <element signature="e#6334#7069#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -56,7 +107,6 @@
         <option value="$PROJECT_DIR$/public/scss/extra.scss" />
         <option value="$PROJECT_DIR$/public/stylesheets/material-shadows.scss" />
         <option value="$PROJECT_DIR$/public/javascripts/main.js" />
-        <option value="$PROJECT_DIR$/public/stylesheets/style.scss" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/data/models/statistic.js" />
         <option value="$PROJECT_DIR$/data/schemas/statistic.js" />
@@ -67,17 +117,18 @@
         <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/data/schemas/stat.js" />
         <option value="$PROJECT_DIR$/data/repositories/genericRepository.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/hoot.js" />
         <option value="$PROJECT_DIR$/sockets.js" />
         <option value="$PROJECT_DIR$/public/javascripts/index.js" />
         <option value="$PROJECT_DIR$/views/home/index.jade" />
-        <option value="$PROJECT_DIR$/views/home/room.jade" />
         <option value="$PROJECT_DIR$/utils/utils.js" />
         <option value="$PROJECT_DIR$/views/test/index.jade" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/tests/generatorTest.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/test/test.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/hoot.js" />
+        <option value="$PROJECT_DIR$/views/home/room.jade" />
+        <option value="$PROJECT_DIR$/public/stylesheets/style.scss" />
       </list>
     </option>
   </component>
@@ -128,6 +179,88 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Hoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -238,7 +371,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="876" extended-state="7" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -528,13 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8359046" vertical-offset="0" max-vertical-offset="1751">
-          <caret line="277" column="11" selection-start-line="277" selection-start-column="11" selection-end-line="277" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/layout.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
@@ -567,6 +693,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="106386">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -577,24 +704,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/home/room.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26391754" vertical-offset="8" max-vertical-offset="748">
-          <caret line="8" column="144" selection-start-line="8" selection-start-column="144" selection-end-line="8" selection-end-column="144" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="739">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/hoot.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18875502" vertical-offset="110" max-vertical-offset="1649">
-          <caret line="33" column="27" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -625,17 +739,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/home/index.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5060893" vertical-offset="0" max-vertical-offset="739">
           <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -672,6 +780,168 @@
             <element signature="e#156#393#0" expanded="false" />
             <element signature="e#437#893#0" expanded="false" />
             <element signature="n#!!block;n#onlyUnique#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/home/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/hoot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.79296345" vertical-offset="1012" max-vertical-offset="1751">
+          <caret line="395" column="55" selection-start-line="395" selection-start-column="55" selection-end-line="395" selection-end-column="55" />
+          <folding>
+            <element signature="e#135#596#0" expanded="false" />
+            <element signature="e#155#594#0" expanded="false" />
+            <element signature="e#165#226#0" expanded="false" />
+            <element signature="e#236#407#0" expanded="false" />
+            <element signature="e#417#588#0" expanded="false" />
+            <element signature="e#619#718#0" expanded="false" />
+            <element signature="e#638#716#0" expanded="false" />
+            <element signature="e#876#1148#0" expanded="false" />
+            <element signature="e#973#1144#0" expanded="false" />
+            <element signature="e#1020#1088#0" expanded="false" />
+            <element signature="e#1195#1308#0" expanded="false" />
+            <element signature="e#1355#1493#0" expanded="false" />
+            <element signature="e#1535#1587#0" expanded="false" />
+            <element signature="n#!!block;n#getRandomKey#0" expanded="false" />
+            <element signature="e#1782#1899#0" expanded="false" />
+            <element signature="n#!!block;n#enableControls#0" expanded="false" />
+            <element signature="e#2306#2434#0" expanded="false" />
+            <element signature="e#2332#2370#0" expanded="false" />
+            <element signature="e#2514#3219#0" expanded="false" />
+            <element signature="e#2560#2589#0" expanded="false" />
+            <element signature="e#2629#2819#0" expanded="false" />
+            <element signature="e#2671#2708#0" expanded="false" />
+            <element signature="e#2873#2961#0" expanded="false" />
+            <element signature="e#3018#3217#0" expanded="false" />
+            <element signature="e#3064#3158#0" expanded="false" />
+            <element signature="e#3252#3405#0" expanded="false" />
+            <element signature="n#!!block;n#sendMessage#0" expanded="false" />
+            <element signature="n#!!block;n#getUserMediaCallback#0" expanded="false" />
+            <element signature="e#3967#4025#0" expanded="false" />
+            <element signature="n#!!block;n#getUserMediaErrorCallback#0" expanded="false" />
+            <element signature="n#!!block;n#tryStartup#0" expanded="false" />
+            <element signature="e#4227#4404#0" expanded="false" />
+            <element signature="e#4362#4398#0" expanded="false" />
+            <element signature="n#!!block;n#createPeerConnection#0" expanded="false" />
+            <element signature="e#4495#4828#0" expanded="false" />
+            <element signature="e#4843#4945#0" expanded="false" />
+            <element signature="n#!!block;n#handleIceCandidate#0" expanded="false" />
+            <element signature="e#5076#5284#0" expanded="false" />
+            <element signature="e#5098#5270#0" expanded="false" />
+            <element signature="e#5290#5351#0" expanded="false" />
+            <element signature="n#!!block;n#handleRemoteStreamAdded#0" expanded="false" />
+            <element signature="n#!!block;n#handleRemoteStreamRemoved#0" expanded="false" />
+            <element signature="n#!!block;n#startCall#0" expanded="false" />
+            <element signature="n#!!block;n#startAnswer#0" expanded="false" />
+            <element signature="n#!!block;n#setLocalAndSendMessage#0" expanded="false" />
+            <element signature="n#!!block;n#handleCreateOfferError#0" expanded="false" />
+            <element signature="n#!!block;n#preferOpus#0" expanded="false" />
+            <element signature="e#6618#6734#0" expanded="false" />
+            <element signature="e#6670#6728#0" expanded="false" />
+            <element signature="e#6764#6791#0" expanded="false" />
+            <element signature="e#6897#7202#0" expanded="false" />
+            <element signature="e#6952#7196#0" expanded="false" />
+            <element signature="e#7061#7167#0" expanded="false" />
+            <element signature="n#!!block;n#extractSdp#0" expanded="false" />
+            <element signature="n#!!block;n#setDefaultCodec#0" expanded="false" />
+            <element signature="e#7702#7958#0" expanded="false" />
+            <element signature="e#7729#7859#0" expanded="false" />
+            <element signature="e#7897#7952#0" expanded="false" />
+            <element signature="n#!!block;n#removeCN#0" expanded="false" />
+            <element signature="e#8255#8641#0" expanded="false" />
+            <element signature="e#8352#8635#0" expanded="false" />
+            <element signature="e#8440#8553#0" expanded="false" />
+            <element signature="e#8784#8826#0" expanded="false" />
+            <element signature="e#8895#9267#0" expanded="false" />
+            <element signature="e#8991#9265#0" expanded="false" />
+            <element signature="e#9089#9170#0" expanded="false" />
+            <element signature="e#9334#9496#0" expanded="false" />
+            <element signature="e#9540#10561#0" expanded="false" />
+            <element signature="e#9773#10160#0" expanded="false" />
+            <element signature="e#9824#10152#0" expanded="false" />
+            <element signature="e#9851#10009#0" expanded="false" />
+            <element signature="e#10027#10142#0" expanded="false" />
+            <element signature="e#10170#10559#0" expanded="false" />
+            <element signature="e#10221#10551#0" expanded="false" />
+            <element signature="e#10248#10407#0" expanded="false" />
+            <element signature="e#10425#10541#0" expanded="false" />
+            <element signature="e#10610#11230#0" expanded="false" />
+            <element signature="e#10734#10974#0" expanded="false" />
+            <element signature="e#10888#10961#0" expanded="false" />
+            <element signature="e#10984#11228#0" expanded="false" />
+            <element signature="e#11144#11215#0" expanded="false" />
+            <element signature="n#!!block;n#checkUrl#0" expanded="false" />
+            <element signature="e#11986#12026#0" expanded="false" />
+            <element signature="e#12032#12071#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/home/room.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="22" max-vertical-offset="765">
+          <caret line="33" column="29" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.713885" vertical-offset="970" max-vertical-offset="1853">
+          <caret line="314" column="12" selection-start-line="314" selection-start-column="12" selection-end-line="314" selection-end-column="12" />
+          <folding>
+            <element signature="e#266#360#0" expanded="false" />
+            <element signature="e#380#604#0" expanded="false" />
+            <element signature="e#630#720#0" expanded="false" />
+            <element signature="e#756#793#0" expanded="false" />
+            <element signature="e#816#947#0" expanded="false" />
+            <element signature="e#973#1088#0" expanded="false" />
+            <element signature="e#1133#1247#0" expanded="false" />
+            <element signature="e#1276#1347#0" expanded="false" />
+            <element signature="e#1389#1640#0" expanded="false" />
+            <element signature="e#1688#1744#0" expanded="false" />
+            <element signature="e#1762#1962#0" expanded="false" />
+            <element signature="e#1986#2030#0" expanded="false" />
+            <element signature="e#2052#2078#0" expanded="false" />
+            <element signature="e#2130#2162#0" expanded="false" />
+            <element signature="e#2199#2611#0" expanded="false" />
+            <element signature="e#2651#2746#0" expanded="false" />
+            <element signature="e#2796#2815#0" expanded="false" />
+            <element signature="e#2868#2887#0" expanded="false" />
+            <element signature="e#2953#3285#0" expanded="false" />
+            <element signature="e#3357#3374#0" expanded="false" />
+            <element signature="e#3454#3489#0" expanded="false" />
+            <element signature="e#3531#3596#0" expanded="false" />
+            <element signature="e#3656#3672#0" expanded="false" />
+            <element signature="e#3738#3799#0" expanded="false" />
+            <element signature="e#3871#3908#0" expanded="false" />
+            <element signature="e#3981#4025#0" expanded="false" />
+            <element signature="e#4080#4135#0" expanded="false" />
+            <element signature="e#4190#4261#0" expanded="false" />
+            <element signature="e#4305#4492#0" expanded="false" />
+            <element signature="e#4536#4799#0" expanded="false" />
+            <element signature="e#4849#4869#0" expanded="false" />
+            <element signature="e#4882#4937#0" expanded="false" />
+            <element signature="e#4956#5111#0" expanded="false" />
+            <element signature="e#5128#5257#0" expanded="false" />
+            <element signature="e#5280#5343#0" expanded="false" />
+            <element signature="e#5364#5390#0" expanded="false" />
+            <element signature="e#5404#5533#0" expanded="false" />
+            <element signature="e#5550#5689#0" expanded="false" />
+            <element signature="e#5705#5725#0" expanded="false" />
+            <element signature="e#5744#5976#0" expanded="false" />
+            <element signature="e#6001#6045#0" expanded="false" />
+            <element signature="e#6068#6094#0" expanded="false" />
+            <element signature="e#6138#6332#0" expanded="false" />
+            <element signature="e#6334#7069#0" expanded="false" />
           </folding>
         </state>
       </provider>
