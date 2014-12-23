@@ -4,11 +4,16 @@ module.exports = function(app) {
     });
 
     app.get('/:room', function(req, res) {
-        var data = {
-            room: req.params.room
-        };
+        if (req.params.room.toLowerCase() === 'index') {
+            res.render('home/index');
+        }
+        else {
+            var data = {
+                room: req.params.room
+            };
 
-        res.render('home/room', data);
+            res.render('home/room', data);
+        }
     });
 
     app.post('/room', function(req, res) {
