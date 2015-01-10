@@ -33,7 +33,7 @@ var room, userID;
 
 ////////// ROOMS //////////
 if (roomName !== '') {
-    console.log('CLIENT:    Connecting to room', roomName);
+    //console.log('CLIENT:    Connecting to room', roomName);
 
     getRandomKey(8, function(key) {
         userID = key;
@@ -48,14 +48,14 @@ if (roomName !== '') {
 }
 
 socket.on('p2p-room-created', function (data){
-    console.log('CLIENT:    Created room ' + JSON.stringify(data));
+    //console.log('CLIENT:    Created room ' + JSON.stringify(data));
 
     room = data;
     isInitiator = true;
 });
 
 socket.on('p2p-setup-done', function (data){
-    console.log("CLIENT:    Setup done: " + JSON.stringify(data));
+    //console.log("CLIENT:    Setup done: " + JSON.stringify(data));
 
     room = data;
     isChannelReady = true;
@@ -64,7 +64,7 @@ socket.on('p2p-setup-done', function (data){
 });
 
 socket.on('p2p-room-full', function (){
-    console.log('CLIENT:    This room is full');
+    //console.log('CLIENT:    This room is full');
 });
 
 function getRandomKey(length, gotKeyCallback) {
@@ -156,7 +156,7 @@ function getUserMediaCallback(stream) {
 }
 
 function getUserMediaErrorCallback(error) {
-    console.log('Error while getting user media.');
+    //console.log('Error while getting user media.');
 }
 
 function tryStartup() {
@@ -182,16 +182,16 @@ function createPeerConnection() {
         peerConnection.onaddstream = handleRemoteStreamAdded;
         peerConnection.onremovestream = handleRemoteStreamRemoved;
 
-        console.log("CLIENT:    Created peer connection.");
+        //console.log("CLIENT:    Created peer connection.");
     }
     catch (e) {
-        console.log("Failed to create RTCPeerConnection (" + e.message + ")");
+        //console.log("Failed to create RTCPeerConnection (" + e.message + ")");
         return;
     }
 }
 
 function handleIceCandidate(event) {
-    console.log('CLIENT:    HandleIceCandidate event: ', event);
+    //console.log('CLIENT:    HandleIceCandidate event: ', event);
     if (event.candidate) {
         sendMessage({
             type: 'candidate',
@@ -199,39 +199,39 @@ function handleIceCandidate(event) {
             id: event.candidate.sdpMid,
             candidate: event.candidate.candidate}, room);
     } else {
-        console.log('CLIENT:    End of candidates.');
+        //console.log('CLIENT:    End of candidates.');
     }
 }
 
 function handleRemoteStreamAdded(event) {
-    console.log('CLIENT:    Remote stream added.');
+    //console.log('CLIENT:    Remote stream added.');
     remoteVideo.src = window.URL.createObjectURL(event.stream);
     remoteStream = event.stream;
 }
 
 function handleRemoteStreamRemoved(event) {
-    console.log('CLIENT:    Remote stream removed. Event: ', event);
+    //console.log('CLIENT:    Remote stream removed. Event: ', event);
 }
 
 function startCall() {
-    console.log("CLIENT:    Sending offer to peer");
+    //console.log("CLIENT:    Sending offer to peer");
     peerConnection.createOffer(setLocalAndSendMessage, handleCreateOfferError);
 }
 
 function startAnswer() {
-    console.log("CLIENT:    Sending answer to peer");
+    //console.log("CLIENT:    Sending answer to peer");
     peerConnection.createAnswer(setLocalAndSendMessage, null, sdpConstraints);
 }
 
 function setLocalAndSendMessage(sessionDescription) {
     //sessionDescription.sdp = preferOpus(sessionDescription.sdp);          // audio codec not really needed?
     peerConnection.setLocalDescription(sessionDescription);
-    console.log('CLIENT:    Sending description message:' + sessionDescription);
+    //console.log('CLIENT:    Sending description message:' + sessionDescription);
     sendMessage(sessionDescription, room);
 }
 
 function handleCreateOfferError() {
-    console.log("Create offer error (" + e + ")");
+    //console.log("Create offer error (" + e + ")");
 }
 
 
@@ -316,6 +316,10 @@ window.onbeforeunload = function(e) {
     socket.emit('quit', userID, room);
 }
 
+document.addEventListener("DOMContentLoaded", function(event) {
+    document.getElementById('room-link-text').value = "http://hoot.azurewebsite.net/" + roomName;
+});
+
 document.getElementById('room-chat-input').onkeypress = function(e){
     if (!e) e = window.event;
     var keyCode = e.keyCode || e.which;
@@ -333,7 +337,6 @@ document.getElementById('room-chat-input').onkeypress = function(e){
 };
 
 document.getElementById('room-link-copy').onclick = function(e) {
-    console.log("copying the shit");
     var item = document.getElementById('room-link-text');
     item.select();
 
@@ -344,7 +347,7 @@ socket.on('chat-message', function(chat) {
     var localChatContainer = document.getElementById('local-chat-container');
     var remoteChatContainer = document.getElementById('remote-chat-container');
 
-    console.log(JSON.stringify(chat));
+    //console.log(JSON.stringify(chat));
 
     if (chat.origin === userID) {
         checkUrl(chat.message, function(success) {
