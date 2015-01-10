@@ -66,12 +66,9 @@ socket.on('p2p-setup-done', function (data){
 });
 
 socket.on('p2p-room-full', function (){
-<<<<<<< HEAD
     //console.log('CLIENT:    This room is full');
-=======
     document.getElementById('room-error').style.display = "block";
     document.getElementById('room-stats').style.display = "none";
->>>>>>> a8ee6b285cda2ba7dde62e530a27d3f869b84e93
 });
 
 function getRandomKey(length, gotKeyCallback) {

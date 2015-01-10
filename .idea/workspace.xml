@@ -22,6 +22,115 @@
   <component name="FavoritesManager">
     <favorites_list name="Hoot" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="hoot.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/hoot.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.44262296" vertical-offset="1107" max-vertical-offset="1717">
+              <caret line="324" column="3" selection-start-line="324" selection-start-column="3" selection-end-line="324" selection-end-column="3" />
+              <folding>
+                <element signature="e#135#596#0" expanded="false" />
+                <element signature="e#155#594#0" expanded="false" />
+                <element signature="e#165#226#0" expanded="false" />
+                <element signature="e#236#407#0" expanded="false" />
+                <element signature="e#417#588#0" expanded="false" />
+                <element signature="e#619#718#0" expanded="false" />
+                <element signature="e#638#716#0" expanded="false" />
+                <element signature="e#876#1150#0" expanded="false" />
+                <element signature="e#975#1146#0" expanded="false" />
+                <element signature="e#1022#1090#0" expanded="false" />
+                <element signature="e#1197#1312#0" expanded="false" />
+                <element signature="e#1359#1567#0" expanded="false" />
+                <element signature="e#1609#1796#0" expanded="false" />
+                <element signature="n#!!block;n#getRandomKey#0" expanded="false" />
+                <element signature="e#1991#2108#0" expanded="false" />
+                <element signature="n#!!block;n#enableControls#0" expanded="false" />
+                <element signature="e#2515#2643#0" expanded="false" />
+                <element signature="e#2541#2579#0" expanded="false" />
+                <element signature="e#2723#3428#0" expanded="false" />
+                <element signature="e#2769#2798#0" expanded="false" />
+                <element signature="e#2838#3028#0" expanded="false" />
+                <element signature="e#2880#2917#0" expanded="false" />
+                <element signature="e#3082#3170#0" expanded="false" />
+                <element signature="e#3227#3426#0" expanded="false" />
+                <element signature="e#3273#3367#0" expanded="false" />
+                <element signature="e#3461#3614#0" expanded="false" />
+                <element signature="n#!!block;n#sendMessage#0" expanded="false" />
+                <element signature="n#!!block;n#getUserMediaCallback#0" expanded="false" />
+                <element signature="e#4176#4234#0" expanded="false" />
+                <element signature="n#!!block;n#getUserMediaErrorCallback#0" expanded="false" />
+                <element signature="n#!!block;n#tryStartup#0" expanded="false" />
+                <element signature="e#4438#4615#0" expanded="false" />
+                <element signature="e#4573#4609#0" expanded="false" />
+                <element signature="n#!!block;n#createPeerConnection#0" expanded="false" />
+                <element signature="e#4706#5041#0" expanded="false" />
+                <element signature="e#5056#5160#0" expanded="false" />
+                <element signature="n#!!block;n#handleIceCandidate#0" expanded="false" />
+                <element signature="e#5293#5501#0" expanded="false" />
+                <element signature="e#5315#5487#0" expanded="false" />
+                <element signature="e#5507#5570#0" expanded="false" />
+                <element signature="n#!!block;n#handleRemoteStreamAdded#0" expanded="false" />
+                <element signature="n#!!block;n#handleRemoteStreamRemoved#0" expanded="false" />
+                <element signature="n#!!block;n#startCall#0" expanded="false" />
+                <element signature="n#!!block;n#startAnswer#0" expanded="false" />
+                <element signature="n#!!block;n#setLocalAndSendMessage#0" expanded="false" />
+                <element signature="n#!!block;n#handleCreateOfferError#0" expanded="false" />
+                <element signature="n#!!block;n#preferOpus#0" expanded="false" />
+                <element signature="e#6849#6965#0" expanded="false" />
+                <element signature="e#6901#6959#0" expanded="false" />
+                <element signature="e#6995#7022#0" expanded="false" />
+                <element signature="e#7128#7433#0" expanded="false" />
+                <element signature="e#7183#7427#0" expanded="false" />
+                <element signature="e#7292#7398#0" expanded="false" />
+                <element signature="n#!!block;n#extractSdp#0" expanded="false" />
+                <element signature="n#!!block;n#setDefaultCodec#0" expanded="false" />
+                <element signature="e#7933#8189#0" expanded="false" />
+                <element signature="e#7960#8090#0" expanded="false" />
+                <element signature="e#8128#8183#0" expanded="false" />
+                <element signature="n#!!block;n#removeCN#0" expanded="false" />
+                <element signature="e#8486#8872#0" expanded="false" />
+                <element signature="e#8583#8866#0" expanded="false" />
+                <element signature="e#8671#8784#0" expanded="false" />
+                <element signature="e#9015#9057#0" expanded="false" />
+                <element signature="e#9121#9222#0" expanded="false" />
+                <element signature="e#9293#9665#0" expanded="false" />
+                <element signature="e#9389#9663#0" expanded="false" />
+                <element signature="e#9487#9568#0" expanded="false" />
+                <element signature="e#9732#9857#0" expanded="false" />
+                <element signature="e#9920#9962#0" expanded="false" />
+                <element signature="e#10005#11028#0" expanded="false" />
+                <element signature="e#10240#10627#0" expanded="false" />
+                <element signature="e#10291#10619#0" expanded="false" />
+                <element signature="e#10318#10476#0" expanded="false" />
+                <element signature="e#10494#10609#0" expanded="false" />
+                <element signature="e#10637#11026#0" expanded="false" />
+                <element signature="e#10688#11018#0" expanded="false" />
+                <element signature="e#10715#10874#0" expanded="false" />
+                <element signature="e#10892#11008#0" expanded="false" />
+                <element signature="e#11077#11697#0" expanded="false" />
+                <element signature="e#11201#11441#0" expanded="false" />
+                <element signature="e#11355#11428#0" expanded="false" />
+                <element signature="e#11451#11695#0" expanded="false" />
+                <element signature="e#11611#11682#0" expanded="false" />
+                <element signature="e#11742#12014#0" expanded="false" />
+                <element signature="n#!!block;n#checkUrl#0" expanded="false" />
+                <element signature="e#12453#12493#0" expanded="false" />
+                <element signature="e#12499#12538#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/public/javascripts/hoot.js" />
+      </list>
+    </option>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
   </component>
@@ -73,6 +182,70 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Hoot" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -80,6 +253,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RunManager" selected="Node.js.app.js">
     <configuration default="false" name="app.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="C:/Program Files/NodeJS/node" path-to-js-file="app.js" working-dir="$PROJECT_DIR$">
@@ -140,14 +314,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32982087" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -181,5 +355,119 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/views/home/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="597">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/home/room.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/hoot.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44262296" vertical-offset="1107" max-vertical-offset="1717">
+          <caret line="324" column="3" selection-start-line="324" selection-start-column="3" selection-end-line="324" selection-end-column="3" />
+          <folding>
+            <element signature="e#135#596#0" expanded="false" />
+            <element signature="e#155#594#0" expanded="false" />
+            <element signature="e#165#226#0" expanded="false" />
+            <element signature="e#236#407#0" expanded="false" />
+            <element signature="e#417#588#0" expanded="false" />
+            <element signature="e#619#718#0" expanded="false" />
+            <element signature="e#638#716#0" expanded="false" />
+            <element signature="e#876#1150#0" expanded="false" />
+            <element signature="e#975#1146#0" expanded="false" />
+            <element signature="e#1022#1090#0" expanded="false" />
+            <element signature="e#1197#1312#0" expanded="false" />
+            <element signature="e#1359#1567#0" expanded="false" />
+            <element signature="e#1609#1796#0" expanded="false" />
+            <element signature="n#!!block;n#getRandomKey#0" expanded="false" />
+            <element signature="e#1991#2108#0" expanded="false" />
+            <element signature="n#!!block;n#enableControls#0" expanded="false" />
+            <element signature="e#2515#2643#0" expanded="false" />
+            <element signature="e#2541#2579#0" expanded="false" />
+            <element signature="e#2723#3428#0" expanded="false" />
+            <element signature="e#2769#2798#0" expanded="false" />
+            <element signature="e#2838#3028#0" expanded="false" />
+            <element signature="e#2880#2917#0" expanded="false" />
+            <element signature="e#3082#3170#0" expanded="false" />
+            <element signature="e#3227#3426#0" expanded="false" />
+            <element signature="e#3273#3367#0" expanded="false" />
+            <element signature="e#3461#3614#0" expanded="false" />
+            <element signature="n#!!block;n#sendMessage#0" expanded="false" />
+            <element signature="n#!!block;n#getUserMediaCallback#0" expanded="false" />
+            <element signature="e#4176#4234#0" expanded="false" />
+            <element signature="n#!!block;n#getUserMediaErrorCallback#0" expanded="false" />
+            <element signature="n#!!block;n#tryStartup#0" expanded="false" />
+            <element signature="e#4438#4615#0" expanded="false" />
+            <element signature="e#4573#4609#0" expanded="false" />
+            <element signature="n#!!block;n#createPeerConnection#0" expanded="false" />
+            <element signature="e#4706#5041#0" expanded="false" />
+            <element signature="e#5056#5160#0" expanded="false" />
+            <element signature="n#!!block;n#handleIceCandidate#0" expanded="false" />
+            <element signature="e#5293#5501#0" expanded="false" />
+            <element signature="e#5315#5487#0" expanded="false" />
+            <element signature="e#5507#5570#0" expanded="false" />
+            <element signature="n#!!block;n#handleRemoteStreamAdded#0" expanded="false" />
+            <element signature="n#!!block;n#handleRemoteStreamRemoved#0" expanded="false" />
+            <element signature="n#!!block;n#startCall#0" expanded="false" />
+            <element signature="n#!!block;n#startAnswer#0" expanded="false" />
+            <element signature="n#!!block;n#setLocalAndSendMessage#0" expanded="false" />
+            <element signature="n#!!block;n#handleCreateOfferError#0" expanded="false" />
+            <element signature="n#!!block;n#preferOpus#0" expanded="false" />
+            <element signature="e#6849#6965#0" expanded="false" />
+            <element signature="e#6901#6959#0" expanded="false" />
+            <element signature="e#6995#7022#0" expanded="false" />
+            <element signature="e#7128#7433#0" expanded="false" />
+            <element signature="e#7183#7427#0" expanded="false" />
+            <element signature="e#7292#7398#0" expanded="false" />
+            <element signature="n#!!block;n#extractSdp#0" expanded="false" />
+            <element signature="n#!!block;n#setDefaultCodec#0" expanded="false" />
+            <element signature="e#7933#8189#0" expanded="false" />
+            <element signature="e#7960#8090#0" expanded="false" />
+            <element signature="e#8128#8183#0" expanded="false" />
+            <element signature="n#!!block;n#removeCN#0" expanded="false" />
+            <element signature="e#8486#8872#0" expanded="false" />
+            <element signature="e#8583#8866#0" expanded="false" />
+            <element signature="e#8671#8784#0" expanded="false" />
+            <element signature="e#9015#9057#0" expanded="false" />
+            <element signature="e#9121#9222#0" expanded="false" />
+            <element signature="e#9293#9665#0" expanded="false" />
+            <element signature="e#9389#9663#0" expanded="false" />
+            <element signature="e#9487#9568#0" expanded="false" />
+            <element signature="e#9732#9857#0" expanded="false" />
+            <element signature="e#9920#9962#0" expanded="false" />
+            <element signature="e#10005#11028#0" expanded="false" />
+            <element signature="e#10240#10627#0" expanded="false" />
+            <element signature="e#10291#10619#0" expanded="false" />
+            <element signature="e#10318#10476#0" expanded="false" />
+            <element signature="e#10494#10609#0" expanded="false" />
+            <element signature="e#10637#11026#0" expanded="false" />
+            <element signature="e#10688#11018#0" expanded="false" />
+            <element signature="e#10715#10874#0" expanded="false" />
+            <element signature="e#10892#11008#0" expanded="false" />
+            <element signature="e#11077#11697#0" expanded="false" />
+            <element signature="e#11201#11441#0" expanded="false" />
+            <element signature="e#11355#11428#0" expanded="false" />
+            <element signature="e#11451#11695#0" expanded="false" />
+            <element signature="e#11611#11682#0" expanded="false" />
+            <element signature="e#11742#12014#0" expanded="false" />
+            <element signature="n#!!block;n#checkUrl#0" expanded="false" />
+            <element signature="e#12453#12493#0" expanded="false" />
+            <element signature="e#12499#12538#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
