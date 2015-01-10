@@ -231,7 +231,33 @@
 #room-link div svg {
   margin: 5px 0 0 5px; }
 
+#room-error {
+  display: none;
+  position: absolute;
+  left: 410px;
+  width: 210px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26); }
+
+#room-error h1 {
+  padding: 10px;
+  font-weight: 100;
+  font-size: 15px;
+  background-color: #F44336;
+  color: #FFFFFF;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default; }
+
+#room-error h1:hover {
+  cursor: pointer;
+  background-color: #D50000; }
+
 #room-stats {
+  display: none;
   position: absolute;
   top: 65px;
   left: 440px;

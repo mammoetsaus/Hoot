@@ -61,20 +61,25 @@ var sockets = function(server) {
         });
 
         socket.on('quit', function (userID, room) {
-            if (rooms[room.name].initiator === userID) {
-                rooms[room.name].initiator = null;
-                rooms[room.name].clients--;
-            }
-            else if (rooms[room.name].callee === userID) {
-                rooms[room.name].callee = null;
-                rooms[room.name].clients--;
-            }
+            try {
+                if (rooms[room.name].initiator === userID) {
+                    rooms[room.name].initiator = null;
+                    rooms[room.name].clients--;
+                }
+                else if (rooms[room.name].callee === userID) {
+                    rooms[room.name].callee = null;
+                    rooms[room.name].clients--;
+                }
 
-            if (rooms[room.name].clients === 0) {
-                delete rooms[room.name];
+                if (rooms[room.name].clients === 0) {
+                    delete rooms[room.name];
+                }
+                else {
+                    io.to(room.name).emit('quit');
+                }
             }
-            else {
-                io.to(room.name).emit('quit');
+            catch(e) {
+                utils.log(e.message);
             }
         });
     });

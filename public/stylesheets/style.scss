@@ -4,6 +4,8 @@
 $main-blue:             #3F51B5;
 $second-pink:           #E91E63;
 $second-pink-accent:    #F50057;
+$error-red:             #F44336;
+$error-accent:          #D50000;
 $plain-white:           #FFFFFF;
 $placeholder-white:     #DDDDDD;
 $border-grey:           #333333;
@@ -312,7 +314,39 @@ $border-grey:           #333333;
   margin: 5px 0 0 5px;
 }
 
+#room-error {
+  display: none;
+  position: absolute;
+  left: 410px;
+  width: 210px;
+
+  @include z-depth(1);
+}
+
+#room-error h1 {
+  padding: 10px;
+  font-weight: 100;
+  font-size: 15px;
+
+  background-color: $error-red;
+  color: $plain-white;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+#room-error h1:hover {
+  cursor: pointer;
+  background-color: $error-accent;
+}
+
 #room-stats {
+  display: none;
   position: absolute;
   top: 65px;
   left: 440px;

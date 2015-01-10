@@ -61,10 +61,17 @@ socket.on('p2p-setup-done', function (data){
     isChannelReady = true;
 
     enableControls();
+
+    document.getElementById('room-stats').style.display = "block";
 });
 
 socket.on('p2p-room-full', function (){
+<<<<<<< HEAD
     //console.log('CLIENT:    This room is full');
+=======
+    document.getElementById('room-error').style.display = "block";
+    document.getElementById('room-stats').style.display = "none";
+>>>>>>> a8ee6b285cda2ba7dde62e530a27d3f869b84e93
 });
 
 function getRandomKey(length, gotKeyCallback) {
@@ -342,6 +349,10 @@ document.getElementById('room-link-copy').onclick = function(e) {
 
     document.execCommand('copy', null, '');
 };
+
+document.getElementById('room-error').onclick = function(e) {
+    window.location.assign("/Index/");
+}
 
 socket.on('chat-message', function(chat) {
     var localChatContainer = document.getElementById('local-chat-container');
