@@ -321,7 +321,7 @@ window.onbeforeunload = function(e) {
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    document.getElementById('room-link-text').value = "http://hoot.azurewebsite.net/" + roomName;
+    document.getElementById('room-link-text').value = "http://hoot.azurewebsites.net/" + roomName;
 });
 
 document.getElementById('room-chat-input').onkeypress = function(e){
